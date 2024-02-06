@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## To do:
 
 - initial functionality
-  - fix about page
+  - fix about page - will need to work out how to fetch data in NextJS - see the docs.
 - add realtext pro as font.
 - click on name - home page
 - click on about - about page etc.

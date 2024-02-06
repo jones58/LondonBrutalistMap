@@ -2,9 +2,9 @@ import Header from "./components/header";
 
 export default function Home() {
   return (
-    <main className="mx-auto">
+    <main>
       <Header />
-      Hello
+      <h1>This is a site about the brutalist buildings of London.</h1>
     </main>
   );
 }

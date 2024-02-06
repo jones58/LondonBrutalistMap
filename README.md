@@ -3,10 +3,25 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## To do:
-   - initial functionality
+
+- initial functionality
+  - fix about page
+- add realtext pro as font.
+- click on name - home page
+- click on about - about page etc.
+- make suggestions
 
 ## Later:
+
     - I want to add my brutalist map to this project, to make it into one complete project. This will make editing the map significantly eeasier. See [this guide for help](https://recodebrain.com/how-to-use-mapbox-in-next-js) or [this site for inspiration](https://www.crimesofsolidarity.org/).
+    - Maybe data like:  https://www.crimesofsolidarity.org/data, including way for users to add their own data.
+
+## Building
+
+- After the success of my Brutalist Map project, I wanted to build a game using the same data, to test user's on their knowledge of the buildings. E.g. Photo, what building is this, user inputs their answer.
+- During production, using Next JS, it became obvious that i could make a multi-page site with the data - presenting it in different ways. This would allow different users to engage with it in different ways.
+- First, I set up the app using `create-next-app`.
+- Then I worked on each of the pages in the app, using Tailwind CSS to rapidly design them in a similar style to my Brutalist Map project.
 
 ## Getting Started
 

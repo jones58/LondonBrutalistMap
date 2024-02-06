@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/footer";
+import Header from "./components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Brutalist Buildings",
-  description: "A game for learning the names of famous buildings.",
+  title: "London Brutalism",
+  description:
+    "A website for learning about Brutalist buildings in London.",
 };
 
 export default function RootLayout({
@@ -17,10 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Brutalist Buildings</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>London Brutalism</title>
+        <link rel="icon" href="/favicon.png" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`px-[5vw] ${inter.className}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -4,17 +4,27 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## To do:
 
-- initial functionality
-  - fix about page - will need to work out how to fetch data in NextJS - see the docs.
-- add realtext pro as font.
-- click on name - home page
-- click on about - about page etc.
-- make suggestions
+- Maybe use local geojson data instead of mapbox, work out why url wasn't working for local folder. Try other data storage solutions maybe like mysql etc. Data needs to be easily editable.
 
-## Later:
+Probably use [get static props instead](https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-props) so its prerendered.
 
-    - I want to add my brutalist map to this project, to make it into one complete project. This will make editing the map significantly eeasier. See [this guide for help](https://recodebrain.com/how-to-use-mapbox-in-next-js) or [this site for inspiration](https://www.crimesofsolidarity.org/).
-    - Maybe data like:  https://www.crimesofsolidarity.org/data, including way for users to add their own data.
+- style about page
+- Game where you guess building on picture.
+- Add realtext pro as font.
+- Click on name - home page
+- Click on about - about page etc.
+- Make suggestions
+
+- favicon, same as brutalist map.
+- Use state management - like Redux or Zustand.
+- use React libraries: https://www.freecodecamp.org/news/react-libraries-to-use-in-your-projects/?trk=feed_main-feed-card_feed-article-content
+
+- Brutalist map move over when done other features
+  - see to do list in that repo
+  - see maps folder -https://www.pinballmap.com/ for inspo of tech stack and how the app runs
+    -See nearby wiki, could maybe use wiki pages. Look at how they made it a mobile app running in chrome
+  - I want to add my brutalist map to this project, to make it into one complete project. This will make editing the map significantly eeasier. See [this guide for help](https://recodebrain.com/how-to-use-mapbox-in-next-js) or [this site for inspiration](https://www.crimesofsolidarity.org/).
+  - Maybe data like: https://www.crimesofsolidarity.org/data, including way for users to add their own data.
 
 ## Building
 
@@ -22,6 +32,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - During production, using Next JS, it became obvious that i could make a multi-page site with the data - presenting it in different ways. This would allow different users to engage with it in different ways.
 - First, I set up the app using `create-next-app`.
 - Then I worked on each of the pages in the app, using Tailwind CSS to rapidly design them in a similar style to my Brutalist Map project.
+- Taught myself how to use APIs in Javascript with fetch() and then applied this to Nextjs, using the [docs](https://nextjs.org/docs/app/api-reference/functions/fetch).
 
 ## Getting Started
 

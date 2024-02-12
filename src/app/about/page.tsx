@@ -1,15 +1,19 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react/no-unescaped-entities */
+export default async function About() {
+  const response = await fetch(
+    "https://api.mapbox.com/datasets/v1/jones581/clq89xhv03bmx1nqn0zkcsvxx/features?access_token=pk.eyJ1Ijoiam9uZXM1ODEiLCJhIjoiY2xwNzM4Y3JpMXZ1NjJrcWswNDFrbnl1ZiJ9.Ud2Oqbe9kgEmB3U3UOH98w",
+    {
+      method: "GET",
+    }
+  );
+  if (!response.ok) {
+    throw new Error("Failed to fetch GeoJSON data");
+  }
+  const geoJsonData = await response.json();
+  console.log(geoJsonData);
 
-export default function About() {
-  const [buildingData, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("../data/features.geojson")
-      .then((response) => response.json())
-      .then((buildingData) => {
-        setData(buildingData);
-      });
-  }, []);
+  // destructure the geoJsonData file into an array of features //
+  const features = geoJsonData.features;
 
   return (
     <main>
@@ -37,12 +41,16 @@ export default function About() {
         <section>
           <h2 className="text-2xl">Brutalist Buildings in London</h2>
           <ul>
-            {buildingData.map((feature) => (
+            {features.map((feature: any) => (
               <li key={feature.id}>
                 <h1>{feature.properties.Title}</h1>
                 <p>Designed by: {feature.properties.Designer}</p>
                 <p>Completed in: {feature.properties.Completed}</p>
-                <a href={feature.properties.Url} target="_blank">
+                <a
+                  href={feature.properties.Url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Get Directions
                 </a>
               </li>

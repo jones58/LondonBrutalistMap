@@ -43,15 +43,15 @@ export default async function About() {
                 className="my-5 flex justify-between w-[400px] m-4"
               >
                 <div className="flex flex-col justify-between ">
-                <Image
-                  src={feature.properties.Image}
-                  alt={feature.properties.Title}
-                  width="400"
-                  height="400"
-                  objectFit="cover"
-                  sizes="50vw"
-                  className="filter grayscale w-[400px] h-[400px] max-w-[100vw]"
-                />
+                  <Image
+                    src={feature.properties.Image}
+                    alt={feature.properties.Title}
+                    width="400"
+                    height="400"
+                    objectFit="cover"
+                    sizes="50vw"
+                    className="filter grayscale w-[400px] h-[400px] max-w-[100vw]"
+                  />
                   <div className="w-[400px]">
                     <h1 className="text-2xl font-bold">
                       {feature.properties.Title}

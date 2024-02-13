@@ -33,6 +33,7 @@ Probably use [get static props instead](https://nextjs.org/docs/pages/building-y
 - First, I set up the app using `create-next-app`.
 - Then I worked on each of the pages in the app, using Tailwind CSS to rapidly design them in a similar style to my Brutalist Map project.
 - Taught myself how to use APIs in Javascript with fetch() and then applied this to Nextjs, using the [docs](https://nextjs.org/docs/app/api-reference/functions/fetch).
+  - I spent a long time trying to get this to work - it was relatively simple with the Mapbox URL but I also wanted to use local geojson data where possible (easier to edit and reference). I spent a long time trying to debug this, but eventually I found what I needed in the NextJS[docs](https://vercel.com/guides/loading-static-file-nextjs-api-route).
 
 ## Getting Started
 

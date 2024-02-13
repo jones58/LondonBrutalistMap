@@ -4,22 +4,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## To do:
 
-- mansfield road new image
-- different image size on mobile
-
--style about page
-
 - order by name
 - order by date
 - shuffle button
 
 - Game where you guess building on picture.
 - Add realtext pro as font.
-- Make suggestions
-
+- Make suggestions button maybe
 - favicon, same as brutalist map.
-- Use state management - like Redux or Zustand.
-- use React libraries: https://www.freecodecamp.org/news/react-libraries-to-use-in-your-projects/?trk=feed_main-feed-card_feed-article-content
+- Use state management - like Redux or Zustand maybe.
+- use React libraries: https://www.freecodecamp.org/news/react-libraries-to-use-in-your-projects/?trk=feed_main-feed-card_feed-article-content maybe.
+- load images quicker on vercel.
 
 - Brutalist map move over when done other features
   - see to do list in that repo

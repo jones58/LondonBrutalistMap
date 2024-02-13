@@ -4,15 +4,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## To do:
 
-- Maybe use local geojson data instead of mapbox, work out why url wasn't working for local folder. Try other data storage solutions maybe like mysql etc. Data needs to be easily editable.
+-style about page
 
-Probably use [get static props instead](https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-props) so its prerendered.
+- order by name
+- order by date
+- shuffle button
 
-- style about page
 - Game where you guess building on picture.
 - Add realtext pro as font.
-- Click on name - home page
-- Click on about - about page etc.
 - Make suggestions
 
 - favicon, same as brutalist map.
@@ -33,7 +32,7 @@ Probably use [get static props instead](https://nextjs.org/docs/pages/building-y
 - First, I set up the app using `create-next-app`.
 - Then I worked on each of the pages in the app, using Tailwind CSS to rapidly design them in a similar style to my Brutalist Map project.
 - Taught myself how to use APIs in Javascript with fetch() and then applied this to Nextjs, using the [docs](https://nextjs.org/docs/app/api-reference/functions/fetch).
-  - I spent a long time trying to get this to work - it was relatively simple with the Mapbox URL but I also wanted to use local geojson data where possible (easier to edit and reference). I spent a long time trying to debug this, but eventually I found what I needed in the NextJS[docs](https://vercel.com/guides/loading-static-file-nextjs-api-route).
+  - I spent a long time trying to get this to work - it was relatively simple with the Mapbox URL but I also wanted to use local geojson data where possible (easier to edit and reference). I spent a long time trying to debug this, but eventually I found what I needed in the NextJS[docs](https://vercel.com/guides/loading-static-file-nextjs-api-route) - the Node Promises library.
 
 ## Getting Started
 

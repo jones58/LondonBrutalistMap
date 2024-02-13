@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { promises as fs } from "fs";
 export default async function About() {
   const file = await fs.readFile(

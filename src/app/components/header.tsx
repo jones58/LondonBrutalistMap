@@ -7,6 +7,9 @@ function Header() {
       <a href="/about">
         <h2>About</h2>
       </a>
+      <a href="/building-index">
+        <h2>Index</h2>
+      </a>
       <a href="/game">
         <h2>Game</h2>
       </a>

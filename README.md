@@ -4,20 +4,31 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## To do:
 
+Index page
+
 - order by name
 - order by date
 - shuffle button
+- search
+- back to top floating button/fixed footer
+- visited state on building index.
+
+Game
 
 - Game where you guess building on picture.
+
+About page
+
+- make more interesting
+
+Sitewide
+
 - Add realtext pro as font.
 - Make suggestions button maybe
-- favicon, same as brutalist map.
 - Use state management - like Redux or Zustand maybe.
 - use React libraries: https://www.freecodecamp.org/news/react-libraries-to-use-in-your-projects/?trk=feed_main-feed-card_feed-article-content maybe.
 - load images quicker on vercel.
-- back to top button in footer/ maybe just on index page.
-
-  - view on github and visited at bottom like on brutalist map.
+- view on github and visited at bottom/footer like on brutalist map.
 
 - Brutalist map move over when done other features
   - see to do list in that repo
@@ -26,7 +37,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   - I want to add my brutalist map to this project, to make it into one complete project. This will make editing the map significantly eeasier. See [this guide for help](https://recodebrain.com/how-to-use-mapbox-in-next-js) or [this site for inspiration](https://www.crimesofsolidarity.org/).
   - Maybe data like: https://www.crimesofsolidarity.org/data, including way for users to add their own data.
   - use similar cards as building index for popups.
-  - visited state on building index.
 
 ## Building
 

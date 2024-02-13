@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { promises as fs } from "fs";
 import Image from "next/image";
 export default async function About() {
@@ -14,7 +13,7 @@ export default async function About() {
       <div className="space-y-5">
         <section>
           <h2 className="text-2xl font-bold">What is Brutalism?</h2>
-          <p className="text-xl">
+          <p className="text-xl my-4">
             Brutalism is an architectural style that emerged in the
             1950s. It is characterized by its use of raw, unfinished
             concrete, bold geometric shapes, and an expressive design
@@ -25,22 +24,22 @@ export default async function About() {
         </section>
         <section>
           <h2 className="text-2xl font-bold">Why London?</h2>
-          <p className="text-xl">
+          <p className="text-xl my-4">
             London has some of the best examples of Brutalism in the
             world. After World War II, a group of idealists began to
             rebuild the city in concrete. What remain are some of the
-            most striking civic and housing buildings ever built.
+            most striking civic and housing projects ever built.
           </p>
         </section>
         <section>
           <h2 className="text-2xl font-bold">
             Brutalist Buildings in London
           </h2>
-          <ul className="py-8 flex flex-row flex-wrap">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((feature: any) => (
               <li
                 key={feature.id}
-                className="my-5 flex justify-between w-[400px] m-4"
+                className="sm:my-5 flex justify-center sm:justify-between w-[400px] m-4"
               >
                 <div className="flex flex-col justify-between ">
                   <Image
@@ -50,22 +49,27 @@ export default async function About() {
                     height="400"
                     objectFit="cover"
                     sizes="50vw"
-                    className="filter grayscale w-[400px] h-[400px] max-w-[100vw]"
+                    className="filter grayscale w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]"
                   />
-                  <div className="w-[400px]">
-                    <h1 className="text-2xl font-bold">
+                  <div className="space-y-3 w-[400px] flex flex-col justify-between">
+                    <h1 className="mt-4 text-2xl font-bold sm:h-20">
                       {feature.properties.Title}
                     </h1>
-                    <p className="font-bold">
-                      Designed by: {feature.properties.Designer}
+                    <div className="sm:h-10">
+                      <span className="font-bold">Designed by:</span>{" "}
+                      {feature.properties.Designer}
+                    </div>
+                    <p className="sm:h-10">
+                      <span className="font-bold">Completed in:</span>{" "}
+                      {feature.properties.Completed}
                     </p>
-                    <p>Completed in: {feature.properties.Completed}</p>
                     <a
                       href={feature.properties.URL}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="font-bold hover:underline"
                     >
-                      Get Directions
+                      View on Map
                     </a>
                   </div>
                 </div>

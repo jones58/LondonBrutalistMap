@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## To do:
 
-- mansfield road and no 1 croydon new images
+- mansfield road new image
 - different image size on mobile
 
 -style about page

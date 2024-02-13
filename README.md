@@ -4,6 +4,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## To do:
 
+Game
+
+- Fix form so it gives correct on correct answer.
+
 Index page
 
 - order by name
@@ -12,10 +16,6 @@ Index page
 - search
 - back to top floating button/fixed footer
 - visited state on building index.
-
-Game
-
-- Game where you guess building on picture.
 
 About page
 

@@ -1,7 +1,7 @@
 "use client";
 import { FormEvent } from "react";
 
-function Form(featureTitle: string) {
+function Form(featureTitle: any) {
   return (
     <form
       onSubmit={(event: FormEvent<HTMLFormElement>) => {
@@ -13,7 +13,11 @@ function Form(featureTitle: string) {
         console.log("building is actually:");
         console.log(featureTitle);
         console.log("submitted value");
-        if (guess === featureTitle) {
+        if (
+          featureTitle.featureTitle
+            .toLowerCase()
+            .includes(guess.toLowerCase())
+        ) {
           alert("correct");
           window.location.reload();
         } else {

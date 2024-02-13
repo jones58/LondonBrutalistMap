@@ -14,7 +14,7 @@ export default async function About() {
   const feature =
     features[Math.floor(Math.random() * features.length)];
 
-  const featureTitle = feature.properties.Title;
+  const buildingName: string = feature.properties.Title;
 
   return (
     <div className="w-full sm:w-[400px] sm:p-4">
@@ -32,8 +32,10 @@ export default async function About() {
           <h1 className="text-xl font-bold mb-2">
             What building is this?
           </h1>
-          <Form featureTitle={featureTitle.featureTitle} />
+
+          <Form featureTitle={buildingName} />
         </div>
+        <div>{buildingName}</div>
       </div>
     </div>
   );

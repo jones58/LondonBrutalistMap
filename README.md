@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Game
 
-- Fix form so it gives correct on correct answer.
+- add more steps to game - atm just says correct or incorrect. Score counter etc. Add places already got right to local storage.
 
 Index page
 

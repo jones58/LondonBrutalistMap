@@ -35,7 +35,6 @@ export default async function About() {
 
           <Form featureTitle={buildingName} />
         </div>
-        <div>{buildingName}</div>
       </div>
     </div>
   );

@@ -1,19 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
+import { promises as fs } from "fs";
 export default async function About() {
-  const response = await fetch(
-    "https://api.mapbox.com/datasets/v1/jones581/clq89xhv03bmx1nqn0zkcsvxx/features?access_token=pk.eyJ1Ijoiam9uZXM1ODEiLCJhIjoiY2xwNzM4Y3JpMXZ1NjJrcWswNDFrbnl1ZiJ9.Ud2Oqbe9kgEmB3U3UOH98w",
-    {
-      method: "GET",
-    }
+  const file = await fs.readFile(
+    process.cwd() + "/data/features.geojson",
+    "utf8"
   );
-  if (!response.ok) {
-    throw new Error("Failed to fetch GeoJSON data");
-  }
-  const geoJsonData = await response.json();
-  console.log(geoJsonData);
-
-  // destructure the geoJsonData file into an array of features //
-  const features = geoJsonData.features;
+  const data = JSON.parse(file);
+  const features = data.features;
 
   return (
     <main>

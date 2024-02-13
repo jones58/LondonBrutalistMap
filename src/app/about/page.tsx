@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import Image from "next/image";
+
 export default async function About() {
   const file = await fs.readFile(
     process.cwd() + "/data/features.geojson",
@@ -9,7 +10,7 @@ export default async function About() {
   const features = data.features;
 
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <div className="space-y-5">
         <section>
           <h2 className="text-2xl font-bold">What is Brutalism?</h2>
@@ -18,7 +19,7 @@ export default async function About() {
             1950s. It is characterized by its use of raw, unfinished
             concrete, bold geometric shapes, and an expressive design
             approach. The term "brutalism" originates from Le
-            Corbusier's phrase in French : "béton brut," which means
+            Corbusier's phrase in French: "béton brut," which means
             "raw concrete."
           </p>
         </section>
@@ -32,42 +33,40 @@ export default async function About() {
           </p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold">
-            Brutalist Buildings in London
-          </h2>
+          <h2 className="text-2xl font-bold">Building Index</h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((feature: any) => (
               <li
                 key={feature.id}
-                className="sm:my-5 flex justify-center sm:justify-between w-[400px] m-4"
+                className="w-full sm:w-[400px] sm:p-4"
               >
-                <div className="flex flex-col justify-between ">
+                <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
                   <Image
                     src={feature.properties.Image}
                     alt={feature.properties.Title}
-                    width="400"
-                    height="400"
+                    width={400}
+                    height={400}
                     objectFit="cover"
-                    sizes="50vw"
-                    className="filter grayscale w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]"
+                    sizes="100vw"
+                    className="filter grayscale w-full w-[400px] h-[400px]"
                   />
-                  <div className="space-y-3 w-[400px] flex flex-col justify-between">
-                    <h1 className="mt-4 text-2xl font-bold sm:h-20">
+                  <div className="p-4 w-full h-40">
+                    <h1 className="text-xl font-bold mb-2">
                       {feature.properties.Title}
                     </h1>
-                    <div className="sm:h-10">
+                    <div className="text-sm mb-2">
                       <span className="font-bold">Designed by:</span>{" "}
                       {feature.properties.Designer}
                     </div>
-                    <p className="sm:h-10">
+                    <div className="text-sm mb-2">
                       <span className="font-bold">Completed in:</span>{" "}
                       {feature.properties.Completed}
-                    </p>
+                    </div>
                     <a
                       href={feature.properties.URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-bold hover:underline"
+                      className="text-sm font-bold hover:underline"
                     >
                       View on Map
                     </a>

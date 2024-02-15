@@ -32,7 +32,6 @@ export default async function About() {
           <h1 className="text-xl font-bold mb-2">
             What building is this?
           </h1>
-
           <Form featureTitle={buildingName} />
         </div>
       </div>

@@ -25,10 +25,6 @@ Contact
 
 - proper contact form.
 
-Heading
-
-- highlight selected page in header.
-
 Sitewide
 
 - Add realtext pro as font.

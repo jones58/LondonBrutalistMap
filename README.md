@@ -23,7 +23,7 @@ About page
 
 Contact
 
-- proper contact form.
+- Connect contact form with mongo db - DON'T USE A TUTORIAL, work it out yourself as you go along so you actually learn.[Access Mongo DB here](https://cloud.mongodb.com)
 
 Sitewide
 

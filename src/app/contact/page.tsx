@@ -7,11 +7,11 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-    alert("Thank you for your message!");
+    setIsLoading(true); // Set loading state
 
     const res = await fetch("/api/contact", {
       method: "POST",
@@ -20,9 +20,17 @@ export default function Contact() {
       },
       body: JSON.stringify({ name, email, message }),
     });
+
+    if (!res.ok) {
+      const { error } = await res.json();
+      setError(error);
+      setIsLoading(false); // Reset loading state
+      return;
+    }
+
     const { msg } = await res.json();
     setError(msg);
-    console.log(error);
+    setIsLoading(false); // Reset loading state
   };
 
   return (
@@ -41,6 +49,7 @@ export default function Contact() {
               type="text"
               id="name"
               name="name"
+              value={name}
               onChange={(e) => setName(e.target.value)}
               className="mt-1 block w-full rounded-md bg-gray-100 text-black border-gray-600 p-5"
             />
@@ -51,6 +60,7 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="mt-1 block w-full rounded-md bg-gray-100 text-black border-gray-600 p-5"
             />
@@ -60,6 +70,7 @@ export default function Contact() {
             <textarea
               id="message"
               name="message"
+              value={message}
               onChange={(e) => setMessage(e.target.value)}
               className="mt-1 block w-full rounded-md bg-gray-100 text-black border-gray-600 p-7"
             ></textarea>
@@ -67,9 +78,11 @@ export default function Contact() {
           <button
             type="submit"
             className="w-full bg-white font-bold text-left text-black p-10 rounded-md hover:bg-gray-200"
+            disabled={isLoading} // Disable button during loading
           >
-            Submit
+            {isLoading ? "Submitting..." : "Submit"}
           </button>
+          {error && <p className="text-red-500">{error}</p>}
         </form>
       </div>
     </main>

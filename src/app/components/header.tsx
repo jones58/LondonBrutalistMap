@@ -13,7 +13,7 @@ function Header() {
       <a href="/game">
         <h2>Game</h2>
       </a>
-      <a href="https://jackkershaw.net/" target="_blank">
+      <a href="/contact">
         <h2>Contact</h2>
       </a>
     </div>

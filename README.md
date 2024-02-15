@@ -21,6 +21,10 @@ About page
 
 - make more interesting
 
+Contact
+
+- proper contact form.
+
 Sitewide
 
 - Add realtext pro as font.

@@ -2,46 +2,6 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## To do:
-
-Game
-
-- add more steps to game - atm just says correct or incorrect. Score counter etc. Add places already got right to local storage.
-
-Index page
-
-- order by name
-- order by date
-- shuffle button
-- search
-- back to top floating button/fixed footer
-- visited state on building index.
-
-About page
-
-- make more interesting
-
-Contact
-
-- Connect contact form with mongo db - DON'T USE A TUTORIAL, work it out yourself as you go along so you actually learn.[Access Mongo DB here](https://cloud.mongodb.com)
-
-Sitewide
-
-- Add realtext pro as font.
-- Make suggestions button maybe
-- Use state management - like Redux or Zustand maybe.
-- use React libraries: https://www.freecodecamp.org/news/react-libraries-to-use-in-your-projects/?trk=feed_main-feed-card_feed-article-content maybe.
-- load images quicker on vercel.
-- view on github and visited at bottom/footer like on brutalist map.
-
-- Brutalist map move over when done other features
-  - see to do list in that repo
-  - see maps folder -https://www.pinballmap.com/ for inspo of tech stack and how the app runs
-    -See nearby wiki, could maybe use wiki pages. Look at how they made it a mobile app running in chrome
-  - I want to add my brutalist map to this project, to make it into one complete project. This will make editing the map significantly eeasier. See [this guide for help](https://recodebrain.com/how-to-use-mapbox-in-next-js) or [this site for inspiration](https://www.crimesofsolidarity.org/).
-  - Maybe data like: https://www.crimesofsolidarity.org/data, including way for users to add their own data.
-  - use similar cards as building index for popups.
-
 ## Building
 
 - After the success of my Brutalist Map project, I wanted to build a game using the same data, to test user's on their knowledge of the buildings. E.g. Photo, what building is this, user inputs their answer.
@@ -68,20 +28,3 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

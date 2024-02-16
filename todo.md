@@ -57,5 +57,5 @@ From old brutalist map repo to add in here:
 - Move to custom domain like: londonbrutalistmap.com
 - intro page like on https://www.get-into-gizz.com/
 - images local for faster loading
-- Name on hover over - in hover.js.
+- Name on hover over.
 - Improve SEO.

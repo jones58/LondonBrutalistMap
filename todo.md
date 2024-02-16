@@ -2,7 +2,7 @@
 
 Map page
 
-- load geojson data into it as features.
+- load geojson data into it as features - work out why it's not working atm.
 - Use markers on hover - see [react map gl examples](http://visgl.github.io/react-map-gl/examples/geojson)
 
 Game

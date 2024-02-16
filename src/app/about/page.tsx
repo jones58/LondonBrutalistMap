@@ -1,14 +1,4 @@
-import { promises as fs } from "fs";
-import Image from "next/image";
-
 export default async function About() {
-  const file = await fs.readFile(
-    process.cwd() + "/data/features.geojson",
-    "utf8"
-  );
-  const data = JSON.parse(file);
-  const features = data.features;
-
   return (
     <main className="overflow-x-hidden">
       <div className="space-y-5">

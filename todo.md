@@ -1,4 +1,3 @@
-
 ## To do:
 
 Game
@@ -25,7 +24,6 @@ Contact
 Sitewide
 
 - Add realtext pro as font- instead of [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 
 - Make suggestions button maybe
 - Use state management - like Redux or Zustand maybe.
@@ -59,3 +57,7 @@ From old brutalist map repo to add in here:
 - images local for faster loading
 - Name on hover over.
 - Improve SEO.
+
+- hamburger navbar on mobile
+
+maybe use geolib get center to get center of map for initial loading.

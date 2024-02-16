@@ -4,6 +4,18 @@ import { useEffect, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function MapboxMap() {
+  const [features, setFeatures] = useState<any>([]);
+
+  useEffect(() => {
+    fetch("./data/features.geojson")
+      .then((resp) => resp.json())
+      .then((json) => {
+        setFeatures(json);
+        console.log(json);
+      })
+      .catch((err) => console.error("Could not load data", err));
+  }, []);
+
   return (
     <div className="w-full">
       <ReactMapGL
@@ -16,13 +28,15 @@ export default function MapboxMap() {
         style={{ width: "100%", height: "70vh" }}
         mapStyle="mapbox://styles/jones581/clp8fym2g01u901qmbpzq0dde"
       >
-        {/* features.map((feature: any) => (
+        {features.map((feature: any) => (
           <Marker
             key={feature.id}
             longitude={feature.geometry.coordinates[0]}
             latitude={feature.geometry.coordinates[1]}
-          ></Marker>
-         ))*/}
+          >
+            HELLO WORLD
+          </Marker>
+        ))}
       </ReactMapGL>
     </div>
   );

@@ -1,9 +1,10 @@
 import Header from "./components/header";
+import MapboxMap from "./components/map";
 
 export default function Home() {
   return (
     <main>
-      <h1>Put Brutalist Map here. </h1>
+      <MapboxMap/>
     </main>
   );
 }

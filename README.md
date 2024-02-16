@@ -11,6 +11,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Taught myself how to use APIs in Javascript with fetch() and then applied this to Nextjs, using the [docs](https://nextjs.org/docs/app/api-reference/functions/fetch).
   - I spent a long time trying to get this to work - it was relatively simple with the Mapbox URL but I also wanted to use local geojson data where possible (easier to edit and reference). I spent a long time trying to debug this, but eventually I found what I needed in the NextJS[docs](https://vercel.com/guides/loading-static-file-nextjs-api-route) - the Node Promises library.
 
+
+- Added Brutalist Map into the page
+  - [React-map-gl](https://github.com/visgl/react-map-gl) as an API wrapper for [mapbox-gl](https://github.com/mapbox/mapbox-gl-js), with [mapbox studio](https://www.mapbox.com/studio/) staying as the source.
+  -
+
 ## Getting Started
 
 First, run the development server:

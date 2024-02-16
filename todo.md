@@ -1,5 +1,10 @@
 ## To do:
 
+Map page
+
+- load geojson data into it as features.
+- Use markers on hover - see [react map gl examples](http://visgl.github.io/react-map-gl/examples/geojson)
+
 Game
 
 - add more steps to game - atm just says correct or incorrect. Score counter etc. Add places already got right to local storage.
@@ -61,3 +66,5 @@ From old brutalist map repo to add in here:
 - hamburger navbar on mobile
 
 maybe use geolib get center to get center of map for initial loading.
+
+work out why favicon isn't loading properly - see console.

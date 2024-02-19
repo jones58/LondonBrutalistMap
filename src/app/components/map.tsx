@@ -1,32 +1,15 @@
 "use client";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
-import { useEffect, useState } from "react";
+import ReactMapGL, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import Image from "next/image";
+import fs from "fs";
+import path from "path";
 
-export default function MapboxMap() {
-  const [features, setFeatures] = useState<any>([]);
-
-  useEffect(() => {
-    fetch("./data/features.geojson")
-      .then((resp) => resp.json())
-      .then((json) => {
-        setFeatures(json);
-        console.log(json);
-      })
-      .catch((err) => console.error("Could not load data", err));
-  }, []);
-
+export default function MapPage({ features }: any) {
   return (
     <div className="w-full">
       <ReactMapGL
-        mapboxAccessToken="pk.eyJ1Ijoiam9uZXM1ODEiLCJhIjoiY2xwNzAyeDVlMXlxZzJqbzVvcnBjbDZ3OCJ9.cuGt6LfugBHuqw9rJKQ2DA"
-        initialViewState={{
-          longitude: -0.1276,
-          latitude: 51.5074,
-          zoom: 10,
-        }}
-        style={{ width: "100%", height: "70vh" }}
-        mapStyle="mapbox://styles/jones581/clp8fym2g01u901qmbpzq0dde"
+      // Mapbox configuration...
       >
         {features.map((feature: any) => (
           <Marker
@@ -34,10 +17,35 @@ export default function MapboxMap() {
             longitude={feature.geometry.coordinates[0]}
             latitude={feature.geometry.coordinates[1]}
           >
-            HELLO WORLD
+            {/* Marker content */}
           </Marker>
         ))}
       </ReactMapGL>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const filePath = path.resolve(
+    process.cwd(),
+    "data/features.geojson"
+  );
+
+  try {
+    const fileContent = await fs.promises.readFile(filePath, "utf8");
+    const data = JSON.parse(fileContent);
+
+    return {
+      props: {
+        features: data.features,
+      },
+    };
+  } catch (error) {
+    console.error("Error reading file:", error);
+    return {
+      props: {
+        features: [],
+      },
+    };
+  }
 }

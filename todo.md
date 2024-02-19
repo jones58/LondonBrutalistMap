@@ -2,7 +2,8 @@
 
 Map page
 
-- load geojson data into it as features - work out why it's not working atm.
+- load geojson data into it as features using [Get Static Props](https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-props)
+
 - Use markers on hover - see [react map gl examples](http://visgl.github.io/react-map-gl/examples/geojson)
 
 Game
@@ -68,3 +69,7 @@ From old brutalist map repo to add in here:
 maybe use geolib get center to get center of map for initial loading.
 
 work out why favicon isn't loading properly - see console.
+
+Image with src "https://www.modernism-in-metroland.co.uk/uploads/1/0/2/5/10257505/img-3146_orig.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+
+[dynamic routes](https://www.youtube.com/watch?v=WPdJaBFquNc)

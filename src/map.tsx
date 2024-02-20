@@ -1,6 +1,5 @@
 "use client";
 import ReactMapGL, { Marker } from "react-map-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
 export default function MapPage() {
   return (
     <div className="w-full">
@@ -14,13 +13,13 @@ export default function MapPage() {
         style={{ width: "100%", height: "70vh" }}
         mapStyle="mapbox://styles/jones581/clp8fym2g01u901qmbpzq0dde"
       >
-        {features.map((feature: any) => (
+        {/**features.map((feature: any) => (
           <Marker
             key={feature.id}
             longitude={feature.geometry.coordinates[0]}
             latitude={feature.geometry.coordinates[1]}
           ></Marker>
-        ))}
+        ))**/}
       </ReactMapGL>
     </div>
   );

@@ -1,4 +1,4 @@
-export default async function About() {
+export default function AboutPage() {
   return (
     <main className="overflow-x-hidden">
       <div className="space-y-5">

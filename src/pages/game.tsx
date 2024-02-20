@@ -1,40 +1,23 @@
-import { useEffect, useState } from "react";
-import fs from "fs/promises";
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 
-export default function About() {
+export default function Game() {
   const [buildingName, setBuildingName] = useState<string>("");
-  const [feature, setFeature] = useState<any>(null);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const file = await fs.readFile(
-          process.cwd() + "/data/features.geojson",
-          "utf8"
-        );
-        const data = JSON.parse(file);
-        const features = data.features;
-        const randomFeature =
-          features[Math.floor(Math.random() * features.length)];
-        setFeature(randomFeature);
-        setBuildingName(randomFeature.properties.Title);
-      } catch (error) {
-        console.error("Error reading file:", error);
-      }
-    }
-    fetchData();
-  }, []);
-
+  // Function to handle form submission
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const guess: string = (formData.get("guess") || "")
       .toString()
       .trim();
+
+    // Update buildingName state with the value from the form input
+    setBuildingName(guess);
+
     console.log("guess is:", guess);
-    console.log("building is actually:", buildingName);
+    console.log("building is actually:", buildingName); // This will log the previous value of buildingName, not the updated one
     console.log("submitted value:", guess);
+
     if (guess === "") {
       alert("Please enter a guess.");
       return;
@@ -50,16 +33,6 @@ export default function About() {
   return (
     <div className="w-full sm:w-[400px] sm:p-4">
       <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-        {feature && (
-          <img
-            alt="A brutalist building in black and white"
-            src={feature.properties.Image}
-            width={400}
-            height={400}
-            sizes="100vw"
-            className="filter grayscale w-full w-[400px] h-[400px] object-cover"
-          />
-        )}
         <div className="p-4 w-full h-40">
           <h1 className="text-xl font-bold mb-2">
             What building is this?

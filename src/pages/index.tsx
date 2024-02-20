@@ -1,28 +1,20 @@
-import { promises as fs } from "fs";
-import Image from "next/image";
+import { FeaturesData } from "../components/geoJSONData.tsx";
 
-export default async function About() {
-  const file = await fs.readFile(
-    process.cwd() + "/data/features.geojson",
-    "utf8"
-  );
-  const data = JSON.parse(file);
-  const features = data.features;
-
+export default function Index() {
+  const features = FeaturesData.features;
   return (
     <section className="overflow-x-hidden">
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {features.map((feature: any) => (
           <li key={feature.id} className="w-full sm:w-[400px] sm:p-4">
             <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-              <Image
+              <img
                 src={feature.properties.Image}
                 alt={feature.properties.Title}
                 width={400}
                 height={400}
-                objectFit="cover"
                 sizes="100vw"
-                className="filter grayscale w-full w-[400px] h-[400px]"
+                className="filter grayscale w-full w-[400px] h-[400px] object-cover"
               />
               <div className="p-4 w-full h-40">
                 <h1 className="text-xl font-bold mb-2">

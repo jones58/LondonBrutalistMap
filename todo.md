@@ -1,10 +1,27 @@
 ## To do:
 
-Abandon NextJS, use React instead.
+- Rewrite Readme to reflect change from NextJS to just React.
+- add 404 error page, following [this video from 7.05 onwards](https://www.youtube.com/watch?v=oTIJunBa6MA)
 
 Map page
 
-- load geojson data into it as features using one of the solutions
+- Add markers - something like https://docs.mapbox.com/mapbox-gl-js/example/geojson-markers/
+  similar to but not same as this:
+
+```tsx
+const features = FeaturesData.features;
+{
+  features.map((feature: any) => (
+    <Marker
+      key={feature.id}
+      longitude={feature.geometry.coordinates[0]}
+      latitude={feature.geometry.coordinates[1]}
+    ></Marker>
+  ));
+}
+```
+
+- Add controls - see [docs](http://visgl.github.io/react-map-gl/examples/controls)
 
 - Use markers on hover - see [react map gl examples](http://visgl.github.io/react-map-gl/examples/geojson)
 

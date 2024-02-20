@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <main className="overflow-x-hidden">
+    <div>
       <div className="space-y-5">
         <section>
           <h2 className="text-2xl font-bold">What is Brutalism?</h2>
@@ -23,6 +23,6 @@ export default function AboutPage() {
           </p>
         </section>
       </div>
-    </main>
+    </div>
   );
 }

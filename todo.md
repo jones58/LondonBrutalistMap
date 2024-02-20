@@ -1,81 +1,10 @@
 ## To do:
 
+Abandon NextJS, use React instead.
+
 Map page
 
-- load geojson data into it as features using one of these solutions::
-
-If you have a GeoJSON file containing 104 features that you want to access across different pages in a TypeScript and Next.js project, there are a few approaches you can consider:
-
-    Static Data: If the GeoJSON data doesn't change frequently and is relatively small, you can directly import it as static data in your Next.js project. You can either parse the GeoJSON file and store it as an array of features in a TypeScript file or directly import the GeoJSON file.
-
-    typescript
-
-// geojsonData.ts
-import geojson from './path/to/your/geojson.json';
-
-export const features = geojson.features;
-
-Then, you can import features from geojsonData.ts in any component where you need to use the GeoJSON data.
-
-Server-side Data Fetching: If the GeoJSON data is large or changes frequently, you can fetch it from a server-side API route in your Next.js project.
-
-    Create an API route (/api/geojson) in your Next.js project that reads the GeoJSON file and returns its contents.
-    Use getServerSideProps or getStaticProps in your page components to fetch the GeoJSON data from the API route.
-
-typescript
-
-// pages/myPage.tsx
-export const getServerSideProps: GetServerSideProps = async () => {
-const res = await fetch('/api/geojson');
-const data = await res.json();
-
-return {
-props: {
-features: data.features,
-},
-};
-};
-
-const MyPage: React.FC<{ features: Feature[] }> = ({ features }) => {
-// Use features in your component
-};
-
-Context or State Management: If the GeoJSON data needs to be shared across multiple pages and components, you can store it in a React context or state management solution like Redux or Zustand.
-
-    Fetch the GeoJSON data in a higher-level component and store it in the context or global state.
-    Access the GeoJSON data from the context or global state in any component where you need to use it.
-
-typescript
-
-// GeoJSONContext.tsx
-const GeoJSONContext = createContext<Feature[]>([]);
-
-export const GeoJSONProvider: React.FC = ({ children }) => {
-const [geoJSON, setGeoJSON] = useState<Feature[]>([]);
-
-useEffect(() => {
-// Fetch GeoJSON data and set it in state
-}, []);
-
-return (
-<GeoJSONContext.Provider value={geoJSON}>
-{children}
-</GeoJSONContext.Provider>
-);
-};
-
-export const useGeoJSON = () => useContext(GeoJSONContext);
-
-typescript
-
-    // MyComponent.tsx
-    const MyComponent: React.FC = () => {
-      const geoJSON = useGeoJSON();
-
-      // Use geoJSON in your component
-    };
-
-Choose the approach that best fits your project requirements and constraints, considering factors like data size, data update frequency, and component reusability.
+- load geojson data into it as features using one of the solutions
 
 - Use markers on hover - see [react map gl examples](http://visgl.github.io/react-map-gl/examples/geojson)
 

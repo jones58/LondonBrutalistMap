@@ -1,9 +1,11 @@
+import MapboxMap from "./map";
 
 function App() {
-
-
   return (
-   <div>Hello</div>)
+    <main>
+      <MapboxMap />
+    </main>
+  );
 }
 
-export default App
+export default App;

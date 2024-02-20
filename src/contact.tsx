@@ -1,11 +1,9 @@
-"use client";
 import { useState } from "react";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
 
   const handleSubmit = (e: any) => {
     e.preventDefault();

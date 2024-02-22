@@ -2,6 +2,10 @@
 
 Map page
 
+- Use markers on hover - see [react map gl examples](http://visgl.github.io/react-map-gl/examples/geojson)
+
+- popup on click - Like on brutalistmap.jackkershaw.net, filling the space.
+
 - Change colour of marker based on visited:
 
 ```
@@ -11,8 +15,6 @@ Map page
       marker.style.backgroundColor = "#D81E5B";
     }
 ```
-
-- Use markers on hover - see [react map gl examples](http://visgl.github.io/react-map-gl/examples/geojson)
 
 Game
 

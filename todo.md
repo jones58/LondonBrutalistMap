@@ -1,11 +1,5 @@
 ## To do:
 
-- Rewrite Readme to reflect change from NextJS to just React.
-
-- deploy to netlify.
-
-- improve readme with [this](https://www.youtube.com/watch?v=1wKtKFY_ueM)
-
 Map page
 
 - Add markers - something like https://docs.mapbox.com/mapbox-gl-js/example/geojson-markers/
@@ -47,13 +41,16 @@ About page
 
 Contact
 
-- Connect contact form with db.
+- Connect contact form with db or use Netlify forms.
 
 Sitewide
 
-- Add realtext pro as font- instead of [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Other
 
-- Make suggestions button maybe
+- Deploy to netlify, check on [here](https://brutalistmap2.netlify.app/)
+- improve readme with [this](https://www.youtube.com/watch?v=1wKtKFY_ueM)
+- Add realtext pro as font.
+- Make suggestions button maybe, link to contact page...
 - Use state management - like Redux or Zustand maybe.
 - use React libraries: https://www.freecodecamp.org/news/react-libraries-to-use-in-your-projects/?trk=feed_main-feed-card_feed-article-content maybe.
 - load images quicker on vercel.

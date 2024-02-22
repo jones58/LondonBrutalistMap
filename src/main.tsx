@@ -8,6 +8,7 @@ import About from "./pages/about.tsx";
 import Contact from "./pages/contact.tsx";
 import Index from "./pages/index.tsx";
 import Header from "./components/header.tsx";
+import Footer from "./components/footer.tsx";
 import ErrorPage from "./pages/errorpage.tsx";
 
 const router = createBrowserRouter([
@@ -67,6 +68,7 @@ function Layout({
     <div className="px-[5vw]">
       <Header />
       {children}
+      <Footer />
     </div>
   );
 }

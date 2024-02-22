@@ -18,6 +18,9 @@ This is a React app, bootstrapped with Vite and deployed to Netlify.
 
 - Added React Router to navigate between pages and serve a 404 page and Link elements to improve page load speed.
 - Deployed to Netlify.
+- Added markers to the map using a map function.
+- Added controls to the map using the example [in the React-map-gl docs](https://github.com/visgl/react-map-gl/blob/7.1-release/examples/controls/src/app.tsx) as a guide.
+-
 
 ## Running on your machine
 

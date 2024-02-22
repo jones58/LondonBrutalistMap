@@ -2,7 +2,6 @@
 
 Map page
 
-- Make more like brutalistmap.jackkershaw.net
 - Change colour of marker based on visited:
 
 ```

@@ -1,3 +1,4 @@
+import React, { useState, useCallback } from "react";
 import Map, {
   Marker,
   GeolocateControl,
@@ -8,6 +9,11 @@ import Map, {
 import { FeaturesData } from "../components/geoJSONData.tsx";
 
 export default function MapPage() {
+  const [showPopup, setShowPopup] = useState(false);
+  const features = FeaturesData.features;
+  const handleClick = useCallback(() => {
+    setShowPopup(true);
+  }, []);
   return (
     <div>
       <div className="w-full">
@@ -25,18 +31,19 @@ export default function MapPage() {
           <FullscreenControl position="top-left" />
           <NavigationControl position="top-left" />
           <ScaleControl />
-          {FeaturesData.features.map((feature: any) => (
+          {features.map((feature) => (
             <Marker
               key={feature.id}
               longitude={feature.geometry.coordinates[0]}
               latitude={feature.geometry.coordinates[1]}
+              onClick={handleClick}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
-                fill="red"
+                fill="#D81E5B"
               >
                 <circle cx="10" cy="10" r="6" />
               </svg>

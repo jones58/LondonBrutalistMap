@@ -22,6 +22,13 @@ export default function AboutPage() {
             most striking civic and housing projects ever built.
           </p>
         </section>
+        <section>
+          <h2 className="text-2xl font-bold">What is this website?</h2>
+          <p className="text-xl my-4">
+            This website was created by Jack Kershaw, the code can be
+            viewed here: [INSERT LINK]
+          </p>
+        </section>
       </div>
     </div>
   );

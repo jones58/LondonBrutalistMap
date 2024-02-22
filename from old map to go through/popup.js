@@ -92,7 +92,6 @@ const onClick = (event) => {
           <path d="M0,507.14c0-149.86,0-299.71,0-449.57,.3-1.38,.74-2.75,.87-4.14,.49-5.35,1.44-10.61,3.02-15.73C8.26,23.55,16.73,12.85,30.3,6.48,37.98,2.87,46.14,1.1,54.57,.45,55.58,.37,56.57,.15,57.58,0c134.66,0,269.32,0,403.99,0,.85,.12,1.7,.34,2.54,.35,11.51,.02,23.03,.05,34.54,0,7.71-.03,15.33,.58,22.8,2.56,18.04,4.78,30.06,15.91,35.68,33.8,2.39,7.62,3.44,15.42,3.4,23.39,0,.76,.23,1.52,.35,2.28V501.87c-.12,.85-.35,1.69-.35,2.54,.04,6.83-.74,13.55-2.57,20.13-4.18,15.09-13.06,26.11-27.82,32-5.97,2.39-12.2,3.71-18.58,4.38-2.28,.24-4.55,.61-6.82,.92H56.62c-.76-.15-1.52-.36-2.3-.43-5.8-.57-11.57-1.29-17.2-2.93-14.92-4.36-25.76-13.35-31.7-27.89-2.46-6.03-3.8-12.33-4.51-18.79-.17-1.57-.6-3.11-.91-4.66ZM433.32,140.72c-67.57,67.53-134.91,134.83-202.37,202.25-34.87-34.87-69.51-69.51-103.83-103.83-19.74,19.74-39.31,39.31-58.56,58.56,52.83,52.83,105.9,105.9,158.99,158.99,86.74-86.88,173.67-173.96,260.79-261.23-18.1-18.02-36.45-36.27-55.01-54.74Z"/>
           <path class="cls-1" d="M433.32,140.72c18.56,18.47,36.91,36.73,55.01,54.74-87.12,87.27-174.05,174.34-260.79,261.23-53.09-53.09-106.16-106.16-158.99-158.99,19.25-19.25,38.82-38.82,58.56-58.56,34.33,34.33,68.97,68.97,103.83,103.83,67.46-67.42,134.8-134.72,202.37-202.25Z"/>
         </svg>`;
-        setCounter();
       } else {
         localStorage.setItem(feature.properties.Title, true);
         checkboxContainer.innerHTML = `
@@ -109,34 +108,12 @@ const onClick = (event) => {
   <path class="cls-1" d="M433.32,140.72c18.56,18.47,36.91,36.73,55.01,54.74-87.12,87.27-174.05,174.34-260.79,261.23-53.09-53.09-106.16-106.16-158.99-158.99,19.25-19.25,38.82-38.82,58.56-58.56,34.33,34.33,68.97,68.97,103.83,103.83,67.46-67.42,134.8-134.72,202.37-202.25Z"/>
 </svg>
   `;
-        setCounter();
       }
     });
 
     popup.classList.remove("hidden");
   }
 };
-
-// linking event listener to map's built-in click function //
-map.on("click", onClick);
-
-function hidePopup() {
-  const popup = document.getElementById("popup");
-  popup.classList.add("hidden");
-}
-
-// display how many values in  local storage in html number - using a regex here because mapbox adds two keys to local storage which we don't want to count.//
-
-function setCounter() {
-  const buildingsVisited = Object.keys(localStorage).filter(
-    (key) => !/mapbox/.test(key)
-  ).length;
-  console.log(buildingsVisited);
-  document.getElementById("counter").innerHTML =
-    "Visited: " + buildingsVisited + "/102";
-}
-
-setCounter();
 
 // listing all places visited in the popup //
 
@@ -178,12 +155,6 @@ clickCounter.addEventListener("click", () => {
   }
   newPopup.classList.remove("hidden");
 });
-
-//clicking on new popup back button closes it//
-function hideNewPopup() {
-  const newPopup = document.getElementById("new-popup");
-  newPopup.classList.add("hidden");
-}
 
 // adding description of what brutalism is in popup //
 

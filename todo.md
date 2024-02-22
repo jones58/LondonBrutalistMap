@@ -1,7 +1,6 @@
 ## To do:
 
 - Rewrite Readme to reflect change from NextJS to just React.
-- add 404 error page, following [this video from 7.05 onwards](https://www.youtube.com/watch?v=oTIJunBa6MA)
 
 Map page
 

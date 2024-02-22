@@ -2,23 +2,16 @@
 
 Map page
 
-- Add markers - something like https://docs.mapbox.com/mapbox-gl-js/example/geojson-markers/
-  similar to but not same as this:
+- Make more like brutalistmap.jackkershaw.net
+- Change colour of marker based on visited:
 
-```tsx
-const features = FeaturesData.features;
-{
-  features.map((feature: any) => (
-    <Marker
-      key={feature.id}
-      longitude={feature.geometry.coordinates[0]}
-      latitude={feature.geometry.coordinates[1]}
-    ></Marker>
-  ));
-}
 ```
-
-- Add controls - see [docs](http://visgl.github.io/react-map-gl/examples/controls)
+  if (localStorage.getItem(marker.id)) {
+      marker.style.backgroundColor = "#00BD9D";
+    } else {
+      marker.style.backgroundColor = "#D81E5B";
+    }
+```
 
 - Use markers on hover - see [react map gl examples](http://visgl.github.io/react-map-gl/examples/geojson)
 
@@ -92,3 +85,7 @@ work out why favicon isn't loading properly - see console.
 Image with src "https://www.modernism-in-metroland.co.uk/uploads/1/0/2/5/10257505/img-3146_orig.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
 
 [dynamic routes](https://www.youtube.com/watch?v=WPdJaBFquNc)
+
+```
+
+```

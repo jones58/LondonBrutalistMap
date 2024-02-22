@@ -1,8 +1,7 @@
 import { FormEvent, useState } from "react";
+import { FeaturesData } from "../components/geoJSONData";
 
 export default function Game() {
-  const [buildingName, setBuildingName] = useState<string>("");
-
   // Function to handle form submission
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,9 +29,23 @@ export default function Game() {
     }
   };
 
+  const features = FeaturesData.features;
+  // Pick a random building on launch //
+  const feature =
+    features[Math.floor(Math.random() * features.length)];
+  const buildingName = feature.properties.Title;
+
   return (
-    <div className="w-full sm:w-[400px] sm:p-4">
-      <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
+    <div className="flex justify-center">
+      <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden w-[400px]">
+        <img
+          alt="A brutalist building in black and white"
+          src={feature.properties.Image}
+          width={400}
+          height={400}
+          sizes="100vw"
+          className="filter grayscale w-full w-[400px] h-[400px] object-cover"
+        />
         <div className="p-4 w-full h-40">
           <h1 className="text-xl font-bold mb-2">
             What building is this?

@@ -18,11 +18,13 @@ Map page
 
 Game
 
+- add features to game and using them to get images - look through previous versions on github if need to.
 - add more steps to game - atm just says correct or incorrect. Score counter etc. Add places already got right to local storage.
 
 Index page
 
 - order by name
+- filter to see ones you've visited / unvisited
 - order by date
 - shuffle button
 - search

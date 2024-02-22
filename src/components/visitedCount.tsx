@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const VisitedCount: React.FC = () => {
   const [buildingsCount, setCount] = useState(0);
@@ -16,7 +17,11 @@ const VisitedCount: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <h1>{`Visited: ${buildingsCount}/104`}</h1>;
+  return (
+    <Link to="/building-index">
+      <h1>{`Visited: ${buildingsCount}/104`}</h1>
+    </Link>
+  );
 };
 
 export default VisitedCount;

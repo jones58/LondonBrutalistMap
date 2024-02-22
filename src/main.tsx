@@ -8,6 +8,7 @@ import About from "./pages/about.tsx";
 import Contact from "./pages/contact.tsx";
 import Index from "./pages/index.tsx";
 import Header from "./components/header.tsx";
+import ErrorPage from "./pages/errorpage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,11 @@ const router = createBrowserRouter([
         <Map />
       </Layout>
     ),
-    errorElement: <div>404 Not Found</div>,
+    errorElement: (
+      <Layout>
+        <ErrorPage></ErrorPage>
+      </Layout>
+    ),
   },
   {
     path: "/game",

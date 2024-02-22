@@ -64,7 +64,7 @@ function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="px-[5vw]">
       <Header />
       {children}
     </div>

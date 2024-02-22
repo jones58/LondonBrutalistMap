@@ -2,6 +2,10 @@
 
 - Rewrite Readme to reflect change from NextJS to just React.
 
+- deploy to netlify.
+
+- improve readme with [this](https://www.youtube.com/watch?v=1wKtKFY_ueM)
+
 Map page
 
 - Add markers - something like https://docs.mapbox.com/mapbox-gl-js/example/geojson-markers/

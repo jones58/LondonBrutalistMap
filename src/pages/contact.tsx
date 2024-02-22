@@ -13,19 +13,21 @@ export default function Contact() {
 
   return (
     <main>
-      <div className="overflow-x-hidden min-h-screen flex justify-center items-center">
+      <div className="overflow-x-hidden flex justify-center">
         <form
           className="max-w-md w-full bg-black p-10 rounded-lg shadow-lg space-y-5"
-          onSubmit={handleSubmit} // This line was added to call handleSubmit on form submission
+          onSubmit={handleSubmit}
         >
-          <h1 className="text-2xl font-bold text-white">Contact me</h1>
+          <h1 className="text-2xl font-bold text-white">
+            Have a suggestion? Feel free to reach out here.
+          </h1>
           <label className="text-white mb-4 block">
             Name
             <input
               type="text"
               id="name"
               name="name"
-              value={name} // Added value attribute to make it a controlled component
+              value={name}
               onChange={(e) => setName(e.target.value)}
               className="mt-1 block w-full rounded-md bg-gray-100 text-black border-gray-600 p-5"
             />
@@ -36,7 +38,7 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
-              value={email} // Added value attribute to make it a controlled component
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="mt-1 block w-full rounded-md bg-gray-100 text-black border-gray-600 p-5"
             />
@@ -46,14 +48,14 @@ export default function Contact() {
             <textarea
               id="message"
               name="message"
-              value={message} // Added value attribute to make it a controlled component
+              value={message}
               onChange={(e) => setMessage(e.target.value)}
               className="mt-1 block w-full rounded-md bg-gray-100 text-black border-gray-600 p-7"
             ></textarea>
           </label>
           <button
-            type="submit" // Changed type to "submit" to submit the form
-            className="text-center w-full bg-white font-bold text-left text-black p-10 rounded-md hover:bg-gray-200"
+            type="submit"
+            className="text-center text-2xl w-full bg-white font-bold text-left text-black p-10 rounded-md hover:bg-gray-200"
           >
             Submit
           </button>

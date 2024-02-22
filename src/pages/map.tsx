@@ -1,4 +1,10 @@
-import Map, { Marker } from "react-map-gl";
+import Map, {
+  Marker,
+  GeolocateControl,
+  FullscreenControl,
+  NavigationControl,
+  ScaleControl,
+} from "react-map-gl";
 import { FeaturesData } from "../components/geoJSONData.tsx";
 
 export default function MapPage() {
@@ -15,6 +21,10 @@ export default function MapPage() {
           style={{ width: "100%", height: "70vh" }}
           mapStyle="mapbox://styles/jones581/clp8fym2g01u901qmbpzq0dde"
         >
+          <GeolocateControl position="top-left" />
+          <FullscreenControl position="top-left" />
+          <NavigationControl position="top-left" />
+          <ScaleControl />
           {FeaturesData.features.map((feature: any) => (
             <Marker
               key={feature.id}

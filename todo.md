@@ -2,7 +2,7 @@
 
 Map page
 
-- Use markers on hover - see [react map gl examples](http://visgl.github.io/react-map-gl/examples/geojson)
+- Show marker info on hover
 
 - popup on click - Like on brutalistmap.jackkershaw.net, filling the space.
 

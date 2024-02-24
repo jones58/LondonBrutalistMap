@@ -10,7 +10,6 @@ const VisitedCount: React.FC = () => {
         (key) => !/mapbox/.test(key)
       ).length;
       setCount(visitedNumber);
-      console.log(visitedNumber);
     };
     calculateVisitedNumber();
     const interval = setInterval(calculateVisitedNumber, 100);

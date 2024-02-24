@@ -9,19 +9,7 @@ import Map, {
 import { FeaturesData } from "../components/geoJSONData.tsx";
 
 export default function MapPage() {
-  const [clickedMarker, setClickedMarker] = useState(null);
-  const [hoveredMarker, setHoveredMarker] = useState(null);
-
   const features = FeaturesData.features;
-
-  const handleClick = useCallback((feature) => {
-    setClickedMarker(feature);
-  }, []);
-
-  const handleHover = useCallback((feature) => {
-    setHoveredMarker(feature);
-  }, []);
-
   return (
     <div>
       <div className="w-full h-[80vh]">
@@ -46,8 +34,6 @@ export default function MapPage() {
               latitude={feature.geometry.coordinates[1]}
             >
               <svg
-                onMouseEnter={() => handleHover(feature)}
-                onMouseLeave={() => setHoveredMarker(null)}
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -62,8 +48,6 @@ export default function MapPage() {
               </svg>
             </Marker>
           ))}
-          {clickedMarker && <div>HELLOOO</div>}
-          {hoveredMarker && <div>HELLOOO2</div>}
         </Map>
       </div>
     </div>

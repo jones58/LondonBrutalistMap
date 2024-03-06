@@ -9,43 +9,44 @@ import Map, {
 import { FeaturesData } from "../components/geoJSONData.tsx";
 
 // Custom marker component with hover state because react map gl doesn't support it //
-const CustomMarker = ({
-  feature,
-  hoveredFeatureId,
-  setHoveredFeatureId,
-}) => {
+const CustomMarker = ({ feature }: { feature: any }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <Marker
-      longitude={feature.geometry.coordinates[0]}
-      latitude={feature.geometry.coordinates[1]}
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill={
-          localStorage.getItem(feature.id) === "true"
-            ? "#00BD9D"
-            : "#D81E5B"
-        }
-        onMouseEnter={() => {
-          setIsHovered(true);
-          setHoveredFeatureId(feature.id);
-        }}
-        onMouseLeave={() => {
-          setIsHovered(false);
-          setHoveredFeatureId(null);
-        }}
-        className="cursor-pointer"
+    <div>
+      <Marker
+        longitude={feature.geometry.coordinates[0]}
+        latitude={feature.geometry.coordinates[1]}
       >
-        <circle cx="10" cy="10" r="6" className="z-0" />
-      </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill={
+            localStorage.getItem(feature.id) === "true"
+              ? "#00BD9D"
+              : "#D81E5B"
+          }
+          onMouseEnter={() => {
+            setIsHovered(true);
+          }}
+          onMouseLeave={() => {
+            setIsHovered(false);
+          }}
+          onClick={() => {
+            setIsClicked(true);
+            setIsHovered(false);
+          }}
+        >
+          <circle cx="10" cy="10" r="6" />
+        </svg>
+      </Marker>
+
       {isHovered && (
         <div
-          className="bg-white p-2 text-black z-1 absolute left-2 top-2 rounded-lg shadow-lg shadow-black"
+          className="bg-white p-5 text-2xl text-black absolute right-10 top-10 rounded-lg shadow-lg shadow-black tooltip z-1 "
           onMouseEnter={() => {
             setIsHovered(true);
           }}
@@ -53,15 +54,51 @@ const CustomMarker = ({
             setIsHovered(false);
           }}
         >
-          {feature.properties.Title}
+          &#128269; {feature.properties.Title}
         </div>
       )}
-    </Marker>
+      {isClicked && (
+        <div className="p-5  absolute right-10   tooltip z-1 ">
+          <div className="w-full h-[70%] sm:w-[400px] sm:p-4">
+            <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
+              <img
+                src={feature.properties.Image}
+                alt={feature.properties.Title}
+                width={400}
+                height={400}
+                sizes="100vw"
+                className="filter grayscale w-full w-[400px] h-[400px] object-cover"
+              />
+              <div className="p-4 w-full h-40">
+                <h1 className="text-xl font-bold mb-2">
+                  {feature.properties.Title}
+                </h1>
+                <div className="text-sm mb-2">
+                  <span className="font-bold">Designed by:</span>{" "}
+                  {feature.properties.Designer}
+                </div>
+                <div className="text-sm mb-2">
+                  <span className="font-bold">Completed in:</span>{" "}
+                  {feature.properties.Completed}
+                </div>
+                <a
+                  href={feature.properties.URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-bold hover:underline"
+                >
+                  Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
 export default function MapPage() {
-  const [hoveredFeatureId, setHoveredFeatureId] = useState(null);
   const features = FeaturesData.features;
   return (
     <div>
@@ -81,12 +118,7 @@ export default function MapPage() {
           <NavigationControl position="top-left" />
           <ScaleControl />
           {features.map((feature) => (
-            <CustomMarker
-              key={feature.id}
-              feature={feature}
-              hoveredFeatureId={hoveredFeatureId}
-              setHoveredFeatureId={setHoveredFeatureId}
-            />
+            <CustomMarker key={feature.id} feature={feature} />
           ))}
         </Map>
       </div>

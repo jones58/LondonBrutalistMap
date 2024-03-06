@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <section className="overflow-x-hidden pb-10 mb-10">
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {features.map((feature: any) => (
+        {features.map((feature) => (
           <li key={feature.id} className="w-full sm:w-[400px] sm:p-4">
             <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
               <img

@@ -9,6 +9,7 @@ import Map, {
 import { FeaturesData } from "../components/geoJSONData.tsx";
 
 // Custom marker component with hover state because react map gl doesn't support it //
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomMarker = ({ feature }: { feature: any }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -46,7 +47,7 @@ const CustomMarker = ({ feature }: { feature: any }) => {
 
       {isHovered && (
         <div
-          className="bg-white p-5 text-2xl text-black absolute right-10 top-10 rounded-lg shadow-lg shadow-black tooltip z-1 "
+          className="bg-white p-5 text-2xl text-black absolute right-10 top-10 rounded-lg shadow-lg shadow-black tooltip z-1 w-[400px]"
           onMouseEnter={() => {
             setIsHovered(true);
           }}
@@ -58,38 +59,36 @@ const CustomMarker = ({ feature }: { feature: any }) => {
         </div>
       )}
       {isClicked && (
-        <div className="p-5  absolute right-10   tooltip z-1 ">
-          <div className="w-full h-[70%] sm:w-[400px] sm:p-4">
-            <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-              <img
-                src={feature.properties.Image}
-                alt={feature.properties.Title}
-                width={400}
-                height={400}
-                sizes="100vw"
-                className="filter grayscale w-full w-[400px] h-[400px] object-cover"
-              />
-              <div className="p-4 w-full h-40">
-                <h1 className="text-xl font-bold mb-2">
-                  {feature.properties.Title}
-                </h1>
-                <div className="text-sm mb-2">
-                  <span className="font-bold">Designed by:</span>{" "}
-                  {feature.properties.Designer}
-                </div>
-                <div className="text-sm mb-2">
-                  <span className="font-bold">Completed in:</span>{" "}
-                  {feature.properties.Completed}
-                </div>
-                <a
-                  href={feature.properties.URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-bold hover:underline"
-                >
-                  Get Directions
-                </a>
+        <div className="absolute right-10 top-10 tooltip">
+          <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden w-[400px]">
+            <img
+              src={feature.properties.Image}
+              alt={feature.properties.Title}
+              width={400}
+              height={400}
+              sizes="100vw"
+              className="filter grayscale w-full w-[400px] h-[400px] object-cover"
+            />
+            <div className="p-4 w-full h-40">
+              <h1 className="text-xl font-bold mb-2">
+                {feature.properties.Title}
+              </h1>
+              <div className="text-sm mb-2">
+                <span className="font-bold">Designed by:</span>{" "}
+                {feature.properties.Designer}
               </div>
+              <div className="text-sm mb-2">
+                <span className="font-bold">Completed in:</span>{" "}
+                {feature.properties.Completed}
+              </div>
+              <a
+                href={feature.properties.URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-bold hover:underline"
+              >
+                Get Directions
+              </a>
             </div>
           </div>
         </div>

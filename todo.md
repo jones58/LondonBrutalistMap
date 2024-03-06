@@ -2,14 +2,12 @@
 
 Map page
 
-- fix hover popup not showing above all svgs - z-index doesn't seem to be fixing it.
-- popup on click - Like on brutalistmap.jackkershaw.net, filling the space.
+- popup on click - fix so it works better. Needs back button, tick button etc. just like on the brutalist map site. See from old map to add folder, for icons to add in. Need to add back button and tick. Also tick for visited on the index page for each building. On mobile too.
+
 - Change colour of marker based on visited - fix this.
   - see maps folder -https://www.pinballmap.com/ for inspo of tech stack and how the app runs
     -See nearby wiki, could maybe use wiki pages. Look at how they made it a mobile app running in chrome
-  - I want to add my brutalist map to this project, to make it into one complete project. This will make editing the map significantly eeasier. See [this guide for help](https://recodebrain.com/how-to-use-mapbox-in-next-js) or [this site for inspiration](https://www.crimesofsolidarity.org/).
   - Maybe data like: https://www.crimesofsolidarity.org/data, including way for users to add their own data.
-  - use similar cards as building index for popups.
 
 Game
 

@@ -2,19 +2,14 @@
 
 Map page
 
-- Show marker info on hover
-
+- fix hover popup not showing above all svgs - z-index doesn't seem to be fixing it.
 - popup on click - Like on brutalistmap.jackkershaw.net, filling the space.
-
-- Change colour of marker based on visited:
-
-```
-  if (localStorage.getItem(marker.id)) {
-      marker.style.backgroundColor = "#00BD9D";
-    } else {
-      marker.style.backgroundColor = "#D81E5B";
-    }
-```
+- Change colour of marker based on visited - fix this.
+  - see maps folder -https://www.pinballmap.com/ for inspo of tech stack and how the app runs
+    -See nearby wiki, could maybe use wiki pages. Look at how they made it a mobile app running in chrome
+  - I want to add my brutalist map to this project, to make it into one complete project. This will make editing the map significantly eeasier. See [this guide for help](https://recodebrain.com/how-to-use-mapbox-in-next-js) or [this site for inspiration](https://www.crimesofsolidarity.org/).
+  - Maybe data like: https://www.crimesofsolidarity.org/data, including way for users to add their own data.
+  - use similar cards as building index for popups.
 
 Game
 
@@ -30,10 +25,11 @@ Index page
 - search
 - back to top floating button/fixed footer
 - visited state on building index.
+- space at bottom
 
-About page
+Header
 
-- make more interesting
+- hamburger navbar on mobile
 
 Contact
 
@@ -41,24 +37,13 @@ Contact
 
 Sitewide
 
-Other
-
-- Deploy to netlify, check on [here](https://brutalistmap2.netlify.app/)
+- fix deploy to netlify, check on [here](https://brutalistmap2.netlify.app/)
 - improve readme with [this](https://www.youtube.com/watch?v=1wKtKFY_ueM)
-- Add realtext pro as font.
 - Make suggestions button maybe, link to contact page...
 - Use state management - like Redux or Zustand maybe.
 - use React libraries: https://www.freecodecamp.org/news/react-libraries-to-use-in-your-projects/?trk=feed_main-feed-card_feed-article-content maybe.
 - load images quicker on vercel.
 - view on github and visited at bottom/footer like on brutalist map.
-
-- Brutalist map move over when done other features
-  - see to do list in that repo
-  - see maps folder -https://www.pinballmap.com/ for inspo of tech stack and how the app runs
-    -See nearby wiki, could maybe use wiki pages. Look at how they made it a mobile app running in chrome
-  - I want to add my brutalist map to this project, to make it into one complete project. This will make editing the map significantly eeasier. See [this guide for help](https://recodebrain.com/how-to-use-mapbox-in-next-js) or [this site for inspiration](https://www.crimesofsolidarity.org/).
-  - Maybe data like: https://www.crimesofsolidarity.org/data, including way for users to add their own data.
-  - use similar cards as building index for popups.
 
 From old brutalist map repo to add in here:
 
@@ -79,16 +64,8 @@ From old brutalist map repo to add in here:
 - Name on hover over.
 - Improve SEO.
 
-- hamburger navbar on mobile
-
 maybe use geolib get center to get center of map for initial loading.
-
-work out why favicon isn't loading properly - see console.
 
 Image with src "https://www.modernism-in-metroland.co.uk/uploads/1/0/2/5/10257505/img-3146_orig.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
 
 [dynamic routes](https://www.youtube.com/watch?v=WPdJaBFquNc)
-
-```
-
-```

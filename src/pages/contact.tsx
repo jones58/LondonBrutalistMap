@@ -17,7 +17,7 @@ export default function Contact() {
         className="max-w-md w-full bg-black p-7 pb-8 rounded-lg shadow-lg"
         onSubmit={handleSubmit}
       >
-        <h1 className="text-2xl font-bold text-white">
+        <h1 className="text-2xl font-bold text-white pb-2">
           Have a suggestion? Feel free to reach out here.
         </h1>
         <label className="text-white mb-4 block">

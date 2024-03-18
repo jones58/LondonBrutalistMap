@@ -1,9 +1,5 @@
 ## To do:
 
-Sitewide
-
-- Fix deploy to netlify, not working atm.
-
 Map page
 
 - popup :
@@ -24,3 +20,7 @@ Header
 Contact
 
 - Connect contact form with db or use Netlify forms.
+
+Sitewide
+
+- Fix deploy to netlify, not working atm.

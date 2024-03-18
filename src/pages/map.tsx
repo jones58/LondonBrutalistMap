@@ -26,7 +26,7 @@ const CustomMarker = ({ feature }: { feature: any }) => {
           height="20"
           viewBox="0 0 20 20"
           fill={
-            localStorage.getItem(feature.id) === "true"
+            localStorage.getItem(feature.properties.Title)
               ? "#00BD9D"
               : "#D81E5B"
           }

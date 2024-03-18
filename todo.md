@@ -1,9 +1,5 @@
 ## To do:
 
-Index page
-
-- mobile optimise
-
 Contact
 
 - Connect contact form with db or use Netlify forms or same form provider as portfolio.

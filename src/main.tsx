@@ -65,7 +65,7 @@ function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="px-[5vw]">
+    <div className="sm:mx-10">
       <Header />
       {children}
       <Footer />

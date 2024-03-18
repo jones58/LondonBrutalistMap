@@ -1,22 +1,38 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(name, email, message);
-    alert("Thank you for your message!");
+    const form = e.currentTarget;
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => {
+        alert("Success!");
+        form.reset();
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => alert(error));
   };
 
   return (
-    <div className="overflow-x-hidden flex justify-center ">
+    <div className="overflow-x-hidden flex justify-center">
       <form
         className="max-w-md w-full bg-black p-7 pb-8 rounded-lg shadow-lg"
         onSubmit={handleSubmit}
+        netlify
+        netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <h1 className="text-2xl font-bold text-white pb-2">
           Have a suggestion? Feel free to reach out here.
         </h1>

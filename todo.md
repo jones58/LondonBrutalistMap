@@ -1,14 +1,11 @@
 ## To do:
 
-Map page
-
-- fix mobile Look
-
 Index page
 
 - visited state - tick box as on map page (just need to copy code from map page)
+- show visited, then click to show more to show all
 
-Header
+  Header
 
 - Fix mobile look, including:
   - hamburger menu

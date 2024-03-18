@@ -63,8 +63,8 @@ const CustomMarker = ({ feature }: { feature: any }) => {
         </div>
       )}
       {isClicked && (
-        <div className="absolute right-1 top-1 tooltip w-full sm:w-[400px] sm:p-2">
-          <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
+        <div className="absolute sm:right-1 sm:top-1 tooltip w-full bg-gray-100 h-[100vh] sm:h-auto sm:rounded-lg sm:w-[400px] sm:p-2 z-10">
+          <div className="flex flex-col items-center justify-center bg-gray-100 sm:rounded-lg overflow-hidden">
             <img
               src={feature.properties.Image}
               alt={feature.properties.Title}
@@ -96,14 +96,14 @@ const CustomMarker = ({ feature }: { feature: any }) => {
             </div>
           </div>
           <div
-            className="flex flex-col justify-between absolute top-5 w-20 h-20 left-5 bg-white rounded-lg"
+            className="flex flex-col justify-between absolute bottom-[250px] sm:top-5 w-20 h-20 left-5 bg-white rounded-lg"
             onClick={() => setIsClicked(false)}
           >
             <CloseButton className="pt-3" />
             <p className="text-center">Back</p>
           </div>
           <div
-            className="flex flex-col justify-between absolute right-5 w-20 h-20 bottom-[180px] bg-white rounded-lg"
+            className="flex flex-col justify-between absolute right-5 w-20 h-20 sm:bottom-[180px] bottom-[250px] bg-white rounded-lg"
             onClick={() => {
               if (localStorage.getItem(feature.properties.Title)) {
                 localStorage.removeItem(feature.properties.Title);

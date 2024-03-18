@@ -2,7 +2,6 @@
 
 Index page
 
-- reflect local storage changes
 - mobile optimise
 
 Contact

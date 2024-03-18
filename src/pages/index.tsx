@@ -68,7 +68,7 @@ export default function Index() {
                 </div>
               </div>
               <div
-                className="flex flex-col justify-between left-[270px] relative w-20 h-20 bottom-[250px] bg-white rounded-lg"
+                className="flex flex-col justify-between left-[250px] sm:left-[270px] relative w-20 h-20 bottom-[250px] bg-white rounded-lg"
                 onClick={() => {
                   toggleVisited(title);
                   handleVisitedToggle(index);

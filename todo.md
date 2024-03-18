@@ -2,6 +2,9 @@
 
 Index page
 
+- reflect local storage changes
+- mobile optimise
+
 Contact
 
 - Connect contact form with db or use Netlify forms or same form provider as portfolio.

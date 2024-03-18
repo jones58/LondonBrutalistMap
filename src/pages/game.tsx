@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent } from "react";
 import { FeaturesData } from "../components/geoJSONData";
 
 export default function Game() {
@@ -9,9 +9,6 @@ export default function Game() {
     const guess: string = (formData.get("guess") || "")
       .toString()
       .trim();
-
-    // Update buildingName state with the value from the form input
-    setBuildingName(guess);
 
     console.log("guess is:", guess);
     console.log("building is actually:", buildingName); // This will log the previous value of buildingName, not the updated one

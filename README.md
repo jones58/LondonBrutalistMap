@@ -32,7 +32,7 @@ Clone the project and run the development server:
 npm run dev
 ```
 
-## Things I'd like to implement later / Useful contributions
+## Things I'd like to implement later / Useful contributions:
 
 - see maps folder -https://www.pinballmap.com/ for inspo of tech stack and how the app runs
 - see nearby wiki, could maybe use wiki pages. Look at how they made it a mobile app running in chrome

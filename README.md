@@ -53,6 +53,9 @@ npm run dev
   - Fix the game so it works - commented out in header atm.
   - add more steps to game - atm just says correct or incorrect. Score counter etc. Add places already got right to local storage.
 - Index page
+
   - Instead of get directions link, have view on map which takes to map page.
-  - filter to see ones you've visited / unvisited
+  - filter to see ones you've visited / unvisited OR show just visited and then click show more option.
+
+- Contact page
   - back to top floating button

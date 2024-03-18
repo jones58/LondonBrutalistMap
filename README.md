@@ -52,3 +52,7 @@ npm run dev
   - I wanted to build a game using the same data, to test user's on their knowledge of the buildings. E.g. Photo, what building is this, user inputs their answer.
   - Fix the game so it works - commented out in header atm.
   - add more steps to game - atm just says correct or incorrect. Score counter etc. Add places already got right to local storage.
+- Index page
+  - Instead of get directions link, have view on map which takes to map page.
+  - filter to see ones you've visited / unvisited
+  - back to top floating button

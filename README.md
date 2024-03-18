@@ -4,7 +4,7 @@ This is a React app, bootstrapped with Vite and deployed to Netlify.
 
 ## Building
 
-- After the success of my (Brutalist Map project)[github.com/jones58/brutalist-map], I wanted to rebuild it in a modern framework. Seeing as much of the functionality of the (old Brutalist map project)[github.com/jones58/brutalist-map] was in JavaScript, I wanted to rebuild it in React, as it was hard to navigate the codebase, something a component based architecture would solve.
+- After the success of my [Brutalist Map project](github.com/jones58/brutalist-map), I wanted to rebuild it in a modern framework. Seeing as much of the functionality of the (old Brutalist map project)[github.com/jones58/brutalist-map] was in JavaScript, I wanted to rebuild it in React, as it was hard to navigate the codebase, something a component based architecture would solve.
 - I realised that this would allow me to use the mapbox NPM package rather than the CDN method I was previously using, which would allow me to host the geojson data myself - making it much easier to edit.
 - During production, it became obvious that I could make a multi-page site with the data, now that I was selfhosting it, allowing me to display it in different ways. This would allow different users to engage as they wished.
 - First, I set up the app using Vite.

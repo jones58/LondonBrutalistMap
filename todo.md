@@ -5,11 +5,6 @@ Index page
 - visited state - tick box as on map page (just need to copy code from map page)
 - show visited, then click to show more to show all
 
-  Header
-
-- Fix mobile look, including:
-  - hamburger menu
-
 Contact
 
 - Connect contact form with db or use Netlify forms or same form provider as portfolio.

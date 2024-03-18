@@ -34,7 +34,7 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="text-sm font-bold hover:underline"
                 >
-                  View on Map
+                  Get Directions
                 </a>
               </div>
             </div>

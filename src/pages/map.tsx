@@ -8,12 +8,15 @@ import Map, {
 } from "react-map-gl";
 import { FeaturesData } from "../components/geoJSONData.tsx";
 import CloseButton from "../components/closeButton.tsx";
+import VisitedCheckbox from "../components/visitedCheckbox.tsx";
+import UnvisitedCheckbox from "../components/unvisitedCheckbox.tsx";
 
 // Custom marker component with hover state because react map gl doesn't support it //
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomMarker = ({ feature }: { feature: any }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [isVisited, setIsVisited] = useState(false);
 
   return (
     <div>
@@ -60,8 +63,8 @@ const CustomMarker = ({ feature }: { feature: any }) => {
         </div>
       )}
       {isClicked && (
-        <div className="absolute right-10 top-10 tooltip">
-          <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden w-[400px]">
+        <div className="absolute right-1 top-1 tooltip w-full sm:w-[400px] sm:p-2">
+          <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
             <img
               src={feature.properties.Image}
               alt={feature.properties.Title}
@@ -91,7 +94,32 @@ const CustomMarker = ({ feature }: { feature: any }) => {
                 Get Directions
               </a>
             </div>
-            <CloseButton className="absolute top-0 right-0 p-4" />
+          </div>
+          <div
+            className="flex flex-col justify-between absolute top-5 w-20 h-20 left-5 bg-white rounded-lg"
+            onClick={() => setIsClicked(false)}
+          >
+            <CloseButton className="pt-3" />
+            <p className="text-center">Back</p>
+          </div>
+          <div
+            className="flex flex-col justify-between absolute right-5 w-20 h-20 bottom-[180px] bg-white rounded-lg"
+            onClick={() => {
+              if (localStorage.getItem(feature.properties.Title)) {
+                localStorage.removeItem(feature.properties.Title);
+                setIsVisited(false);
+              } else {
+                localStorage.setItem(
+                  feature.properties.Title,
+                  "visited"
+                );
+                setIsVisited(true);
+              }
+            }}
+          >
+            {isVisited && <VisitedCheckbox className="pt-3" />}
+            {!isVisited && <UnvisitedCheckbox className="pt-3" />}
+            <p className="text-center">Visited?</p>
           </div>
         </div>
       )}

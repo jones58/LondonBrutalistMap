@@ -7,6 +7,7 @@ import Map, {
   ScaleControl,
 } from "react-map-gl";
 import { FeaturesData } from "../components/geoJSONData.tsx";
+import CloseButton from "../components/closeButton.tsx";
 
 // Custom marker component with hover state because react map gl doesn't support it //
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -90,6 +91,7 @@ const CustomMarker = ({ feature }: { feature: any }) => {
                 Get Directions
               </a>
             </div>
+            <CloseButton className="absolute top-0 right-0 p-4" />
           </div>
         </div>
       )}

@@ -3,8 +3,11 @@
 Map page
 
 - popup :
+
   - back button and tick icons
-- fix change colour of marker based on visited
+
+- visited - add to local storage the name of the building.
+- fix mobile Look
 
 Index page
 
@@ -22,5 +25,7 @@ Contact
 - Connect contact form with db or use Netlify forms.
 
 Sitewide
+
+- compare to brutalist map, when better switch url and describe change in github, move that one to public archive status and link to this.
 
 - Fix deploy to netlify, not working atm.

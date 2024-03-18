@@ -24,6 +24,7 @@ This is a React app, bootstrapped with Vite and deployed to Netlify.
 - Added details of the buildings on hovering over them on the map. I tried using the example [in the React-map-gl docs](http://visgl.github.io/react-map-gl/examples/geojson) but unfortunately couldn't get it to work. A workaround was to create a custom marker, since React Map GL wasn't letting me add onMouseEnter events to the marker that comes with the NPM package. I then used State management, to set whether each marker was hovered over. This caused some flickering which I resolved by binding the onMouseEnter and onMouseLeave events to the div displaying the information on hover.
 - Added click event on marker, similar to the hover event above. Used borrowed html and css from the index page.
 - Edited map so visited buildings are highlighted green on the map.
+- Transformed svg icons to React TSX components using an [online tool](https://react-svgr.com/) - to allow for easier editing.
 
 ## Running on your machine
 

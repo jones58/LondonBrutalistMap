@@ -1,5 +1,9 @@
 ## To do:
 
+Sitewide
+
+- Fix deploy to netlify, not working atm.
+
 Map page
 
 - popup :
@@ -20,12 +24,3 @@ Header
 Contact
 
 - Connect contact form with db or use Netlify forms.
-
-Sitewide
-
-- Fix deploy to netlify, not working atm.
-
-Game
-
-- Fix the game so it works/ remove it for now.
-- add more steps to game - atm just says correct or incorrect. Score counter etc. Add places already got right to local storage.

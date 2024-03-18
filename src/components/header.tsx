@@ -12,9 +12,9 @@ function Header() {
       <Link to="/building-index">
         <h2>Index</h2>
       </Link>
-      <Link to="/game">
+      {/* <Link to="/game">
         <h2>Game</h2>
-      </Link>
+      </Link> */}
       <Link to="/contact">
         <h2>Contact</h2>
       </Link>

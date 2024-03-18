@@ -46,5 +46,7 @@ npm run dev
   - order by name/architect/date built.
   - Filter by Architect.
   - Shuffle button.
-  - Search
--
+  - Search bar.
+- Game page
+  - Fix the game so it works - commented out in header atm.
+  - add more steps to game - atm just says correct or incorrect. Score counter etc. Add places already got right to local storage.

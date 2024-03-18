@@ -9,10 +9,13 @@ export default function Contact() {
     e.preventDefault();
     const form = e.currentTarget;
 
+    const formData = new FormData(form);
+    const searchParams = new URLSearchParams(formData as any);
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(new FormData(form)).toString(),
+      body: searchParams.toString(),
     })
       .then(() => {
         alert("Success!");
@@ -29,8 +32,8 @@ export default function Contact() {
       <form
         className="max-w-md w-full bg-black p-7 pb-8 rounded-lg shadow-lg"
         onSubmit={handleSubmit}
-        netlify
-        netlify-honeypot="bot-field"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
         <h1 className="text-2xl font-bold text-white pb-2">

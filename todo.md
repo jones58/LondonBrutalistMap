@@ -11,7 +11,7 @@ Contact
 
 Sitewide
 
-- Fix deploy to netlify, not working atm.
+- Fix deploy to netlify, not working atm - netlify cli/setup as new project
 
 - change github repo name to brutalist-map-2
 

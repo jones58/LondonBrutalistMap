@@ -1,6 +1,7 @@
 ## To do:
 
-- fix contact form not sending to netlify - resend.
+- fix about page mobile
+
 - change everything to be about new project
   - portfolio projects page
     - new images
@@ -10,3 +11,5 @@
     - new description
     - github link
 - release on LinkedIn
+
+- check netlify form

@@ -23,13 +23,15 @@ export default function AboutPage() {
           </p>
         </section>
         <section>
-          <h1 className="text-2xl font-bold">
-            Who made this website?
-          </h1>
-          <p className="text-xl py-4">
-            This website was created by Jack Kershaw, the code can be
-            viewed{" "}
-            <a href="https://github.com/jones58/brutalist-buildings-guesser">
+          <p className="text-xl py-10">
+            This website was created by Jack Kershaw and the code can
+            be viewed{" "}
+            <a
+              href="https://github.com/jones58/brutalist-buildings-guesser"
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+            >
               here.
             </a>
           </p>

@@ -28,16 +28,13 @@ export default function Index() {
   };
 
   return (
-    <section className="overflow-x-hidden pb-10 mb-10">
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <section className=" pb-10 mb-10 w-full">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
         {features.map((feature, index) => {
           const title = feature.properties.Title;
           const visited = isVisited(title);
           return (
-            <li
-              key={feature.id}
-              className="w-full sm:w-[400px] sm:p-4"
-            >
+            <li key={feature.id}>
               <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
                 <img
                   src={feature.properties.Image}
@@ -68,7 +65,7 @@ export default function Index() {
                 </div>
               </div>
               <div
-                className="flex flex-col justify-between left-[250px] sm:left-[270px] relative w-20 h-20 bottom-[250px] bg-white rounded-lg"
+                className="flex flex-col justify-between left-[75vw] sm:left-[350px] relative w-20 h-20 bottom-[250px] bg-white rounded-lg"
                 onClick={() => {
                   toggleVisited(title);
                   handleVisitedToggle(index);

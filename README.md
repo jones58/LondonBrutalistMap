@@ -1,6 +1,6 @@
 # Brutalist Buildings
 
-Updated Brutalist Map built in React and TypeScript. Bootstrapped with Vite and deployed to Netlify.
+Updated Brutalist Map built in React,TypeScript and Tailwind. Bootstrapped with Vite and deployed to Netlify.
 
 ## Building
 
@@ -25,6 +25,7 @@ Updated Brutalist Map built in React and TypeScript. Bootstrapped with Vite and 
 - Added click event on marker, similar to the hover event above. Used borrowed html and css from the index page.
 - Edited map so visited buildings are highlighted green on the map.
 - Transformed svg icons to React TSX components using an [online tool](https://react-svgr.com/) - to allow for easier editing.
+- Updated mobile look of site after some debugging on different screen sizes.
 
 ## Running on your machine
 

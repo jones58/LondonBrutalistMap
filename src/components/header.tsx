@@ -8,7 +8,7 @@ function Header() {
     <nav
       className={`w-full mt-4 space-y-3 ${
         isOpen ? "h-[50vh]" : "h-[15vh]"
-      } bg-white text-black text-2xl flex flex-col sm:h-[15vh] justify-between  sm:flex-row space-x-4 py-[1vh] sm:place-items-center text-center sm:text-left `}
+      } bg-white text-black text-2xl flex flex-col sm:h-[10vh] justify-between  sm:flex-row space-x-4 py-[1vh] sm:place-items-center text-center sm:text-left `}
     >
       <h1 className="text-3xl font-bold mt-3">London Brutalist Map</h1>
       <h2 className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>

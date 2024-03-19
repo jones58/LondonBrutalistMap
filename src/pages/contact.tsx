@@ -1,37 +1,10 @@
-import { useState, FormEvent } from "react";
-
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-
-    const formData = new FormData(form);
-    const searchParams = new URLSearchParams(formData as any);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: searchParams.toString(),
-    })
-      .then(() => {
-        alert("Success!");
-        form.reset();
-        setName("");
-        setEmail("");
-        setMessage("");
-      })
-      .catch((error) => alert(error));
-  };
-
   return (
     <div className="overflow-x-hidden flex justify-center">
       <form
         className="max-w-md w-full bg-black p-7 pb-8 rounded-lg shadow-lg"
-        onSubmit={handleSubmit}
+        name="contact"
+        method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
@@ -42,32 +15,29 @@ export default function Contact() {
         <label className="text-white mb-4 block">
           Name
           <input
+            required
             type="text"
             id="name"
             name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
             className="mt-1 block w-full rounded-md bg-gray-100 text-black border-gray-600 p-5"
           />
         </label>
         <label className="text-white mb-4 block">
           Email
           <input
+            required
             type="email"
             id="email"
             name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
             className="mt-1 block w-full rounded-md bg-gray-100 text-black border-gray-600 p-5"
           />
         </label>
         <label className="text-white mb-4 block">
           Message
           <textarea
+            required
             id="message"
             name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
             className="mt-1 block w-full rounded-md bg-gray-100 text-black border-gray-600 p-7"
           ></textarea>
         </label>

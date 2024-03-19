@@ -1,6 +1,6 @@
 ## To do:
 
-- fix contact form not sending to netlify - use emailjs instead.
+- fix contact form not sending to netlify - resend.
 - change everything to be about new project
   - portfolio projects page
     - new images

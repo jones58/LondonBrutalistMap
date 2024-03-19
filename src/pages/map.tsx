@@ -96,14 +96,14 @@ const CustomMarker = ({ feature }: { feature: any }) => {
             </div>
           </div>
           <div
-            className="flex flex-col justify-between absolute bottom-[250px] sm:top-5 w-20 h-20 left-5 bg-white rounded-lg"
+            className="flex flex-col justify-between absolute bottom-[85vh] sm:bottom-[250px] sm:top-5 w-20 h-20 left-5 bg-white rounded-lg"
             onClick={() => setIsClicked(false)}
           >
             <CloseButton className="pt-3" />
             <p className="text-center">Back</p>
           </div>
           <div
-            className="flex flex-col justify-between absolute right-5 w-20 h-20 sm:bottom-[180px] bottom-[250px] bg-white rounded-lg"
+            className="flex flex-col justify-between absolute right-5 w-20 h-20 sm:bottom-[180px] bottom-[85vh] bg-white rounded-lg"
             onClick={() => {
               if (localStorage.getItem(feature.properties.Title)) {
                 localStorage.removeItem(feature.properties.Title);

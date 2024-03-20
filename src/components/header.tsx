@@ -21,7 +21,7 @@ function Header() {
         to="/about"
         className={isOpen ? "block" : "hidden sm:block"}
       >
-        <h2>About</h2>
+        <h2>About/Contact</h2>
       </Link>
       <Link
         to="/building-index"
@@ -31,13 +31,13 @@ function Header() {
       </Link>
       {/* <Link to="/game">
         <h2>Game</h2>
-      </Link> */}
+      </Link>
       <Link
         to="/contact"
         className={isOpen ? "block" : "hidden sm:block"}
       >
         <h2>Contact</h2>
-      </Link>
+      </Link> */}
     </nav>
   );
 }

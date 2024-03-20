@@ -57,6 +57,7 @@ npm run dev
 
   - Instead of get directions link, have view on map which takes to map page.
   - filter to see ones you've visited / unvisited OR show just visited and then click show more option.
+  - back to top floating button
 
 - Contact page
-  - back to top floating button
+  - Reinstate this page and get form working properly with Netlify or another form service

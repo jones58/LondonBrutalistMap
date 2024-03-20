@@ -32,7 +32,16 @@ export default function AboutPage() {
               target="_blank"
               rel="noreferrer"
             >
-              here.
+              here
+            </a>
+            . You can contact me by email here: {""}
+            <a
+              href="mailto:jackkershaw@protonmail.com"
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              jackkershaw@protonmail.com
             </a>
           </p>
         </section>

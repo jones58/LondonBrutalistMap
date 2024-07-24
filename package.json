@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.17",
-    "mapbox-gl": "^3.1.2",
+    "mapbox-gl": "^3.4.0",
     "netlify-cli": "^17.19.5",
     "postcss": "^8.4.35",
     "react": "^18.2.0",

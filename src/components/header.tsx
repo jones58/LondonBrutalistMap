@@ -1,44 +1,106 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerWidth < 640 && isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
+
   return (
-    <nav
-      className={`w-full mt-4 space-y-3 ${
-        isOpen ? "h-[50vh]" : "h-[15vh]"
-      } bg-white text-black text-2xl flex flex-col sm:h-[10vh] justify-between  sm:flex-row space-x-4 py-[1vh] sm:place-items-center text-center sm:text-left `}
-    >
-      <h1 className="text-3xl font-bold mt-3">London Brutalist Map</h1>
-      <h2 className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
-        Menu {isOpen ? "▲" : "▼"}
-      </h2>
-      <Link to="/" className={isOpen ? "block" : "hidden sm:block"}>
-        <h2>Map</h2>
-      </Link>
-      <Link
-        to="/about"
-        className={isOpen ? "block" : "hidden sm:block"}
-      >
-        <h2>About/Contact</h2>
-      </Link>
-      <Link
-        to="/building-index"
-        className={isOpen ? "block" : "hidden sm:block"}
-      >
-        <h2>Index</h2>
-      </Link>
-      {/* <Link to="/game">
-        <h2>Game</h2>
-      </Link>
-      <Link
-        to="/contact"
-        className={isOpen ? "block" : "hidden sm:block"}
-      >
-        <h2>Contact</h2>
-      </Link> */}
-    </nav>
+    <header className="bg-white fixed top-0 left-0 right-0 z-50">
+      <div className="mx-auto">
+        <div className="flex justify-between items-center py-4 w-full">
+          <h1 className="text-xl">London Brutalist Map</h1>
+          <nav className="hidden sm:block">
+            <ul className="flex space-x-4">
+              <li>
+                <Link
+                  to="/"
+                  className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+                >
+                  Map
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+                >
+                  About/Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/building-index"
+                  className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+                >
+                  Index
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <button
+            className="sm:hidden text-gray-700 focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={
+                  isOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      {isOpen && (
+        <div className="sm:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            <Link
+              to="/"
+              className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+            >
+              Map
+            </Link>
+            <Link
+              to="/about"
+              className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+            >
+              About/Contact
+            </Link>
+            <Link
+              to="/building-index"
+              className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+            >
+              Index
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
 

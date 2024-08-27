@@ -1,3 +1,5 @@
+import colors from "./src/styles/_colors.scss";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [

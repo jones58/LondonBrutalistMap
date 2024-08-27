@@ -14,6 +14,7 @@
     "mapbox-gl": "^3.1.2",
     "netlify-cli": "^17.19.5",
     "postcss": "^8.4.39",
+    "postcss-nested": "^6.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-map-gl": "^7.1.7",
@@ -31,6 +32,8 @@
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^13.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.1.0"
   }

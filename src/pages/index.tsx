@@ -37,7 +37,7 @@ export default function Index() {
             <li key={feature.id}>
               <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
                 <img
-                  src={feature.properties.Image}
+                  src={`./images/buildings/${feature.properties.Image}.webp`}
                   alt={title}
                   width={400}
                   height={400}

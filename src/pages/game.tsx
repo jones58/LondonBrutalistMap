@@ -37,7 +37,7 @@ export default function Game() {
       <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden w-[400px]">
         <img
           alt="A brutalist building in black and white"
-          src={feature.properties.Image}
+          src={`./images/buildings/${feature.properties.Image}.webp`}
           width={400}
           height={400}
           sizes="100vw"

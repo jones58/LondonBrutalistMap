@@ -66,7 +66,7 @@ const CustomMarker = ({ feature }: { feature: any }) => {
         <div className="absolute sm:right-1 sm:top-1 tooltip w-full bg-gray-100 h-[100vh] sm:h-auto sm:rounded-lg sm:w-[400px] sm:p-2 z-10">
           <div className="flex flex-col items-center justify-center bg-gray-100 sm:rounded-lg overflow-hidden">
             <img
-              src={feature.properties.Image}
+              src={`./images/buildings/${feature.properties.Image}.webp`}
               alt={feature.properties.Title}
               width={400}
               height={400}

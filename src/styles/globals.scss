@@ -1,4 +1,8 @@
-@import "./tailwind.scss";
+@use "tailwindcss/base" as *;
+@use "tailwindcss/components" as *;
+@use "tailwindcss/utilities" as *;
+
+@import "./button";
 
 :root {
   font-family: "Real Text Pro", sans-serif;

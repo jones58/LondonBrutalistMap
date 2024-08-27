@@ -1,7 +1,7 @@
 import { FeaturesData } from "../components/geoJSONData.tsx";
-import VisitedCheckbox from "../components/visitedCheckbox.tsx";
-import UnvisitedCheckbox from "../components/unvisitedCheckbox.tsx";
+
 import { useState } from "react";
+import FeatureCard from "../components/FeatureCard.tsx";
 
 export default function Index() {
   const features = FeaturesData.features;
@@ -9,72 +9,39 @@ export default function Index() {
     new Array(features.length).fill(false)
   );
 
-  const handleVisitedToggle = (index: number) => {
-    const updatedVisitedStates = [...visitedStates];
-    updatedVisitedStates[index] = !visitedStates[index];
-    setVisitedStates(updatedVisitedStates);
-  };
-
   const isVisited = (title: string) => {
     return localStorage.getItem(title);
   };
 
-  const toggleVisited = (title: string) => {
+  const toggleVisited = (title: string, index: number) => {
+    const newVisitedStates = [...visitedStates];
     if (isVisited(title)) {
       localStorage.removeItem(title);
+      newVisitedStates[index] = false;
     } else {
       localStorage.setItem(title, "visited");
+      newVisitedStates[index] = true;
     }
+    setVisitedStates(newVisitedStates);
   };
 
   return (
-    <section className=" pb-10 mb-10 w-full">
+    <section className="pb-10 mb-10 w-full">
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
         {features.map((feature, index) => {
           const title = feature.properties.Title;
-          const visited = isVisited(title);
           return (
             <li key={feature.id}>
-              <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
-                <img
-                  src={`./images/buildings/${feature.properties.Image}.webp`}
-                  alt={title}
-                  width={400}
-                  height={400}
-                  sizes="100vw"
-                  className="filter grayscale w-full w-[400px] h-[400px] object-cover"
-                />
-                <div className="p-4 w-full h-40">
-                  <h1 className="text-xl font-bold mb-2">{title}</h1>
-                  <div className="text-sm mb-2">
-                    <span className="font-bold">Designed by:</span>{" "}
-                    {feature.properties.Designer}
-                  </div>
-                  <div className="text-sm mb-2">
-                    <span className="font-bold">Completed in:</span>{" "}
-                    {feature.properties.Completed}
-                  </div>
-                  <a
-                    href={feature.properties.URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-bold hover:underline"
+              <FeatureCard
+                feature={
+                  feature as import("geojson").Feature<
+                    import("geojson").Geometry,
+                    import("geojson").GeoJsonProperties
                   >
-                    Get Directions
-                  </a>
-                </div>
-              </div>
-              <div
-                className="flex flex-col justify-between left-[75vw] sm:left-[350px] relative w-20 h-20 bottom-[250px] bg-white rounded-lg"
-                onClick={() => {
-                  toggleVisited(title);
-                  handleVisitedToggle(index);
-                }}
-              >
-                {visited && <VisitedCheckbox className="pt-3" />}
-                {!visited && <UnvisitedCheckbox className="pt-3" />}
-                <p className="text-center">Visited?</p>
-              </div>
+                }
+                isVisited={isVisited(title) !== null}
+                onVisitedToggle={() => toggleVisited(title, index)}
+              />
             </li>
           );
         })}

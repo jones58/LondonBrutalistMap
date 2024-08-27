@@ -28,7 +28,7 @@ const FeatureWrapper: React.FC<FeatureWrapperProps> = ({
 
       {isHovered && (
         <HoverInfo
-          title={feature.properties.Title}
+          title={feature.properties?.Title}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         />
@@ -37,24 +37,23 @@ const FeatureWrapper: React.FC<FeatureWrapperProps> = ({
       {isClicked && (
         <InfoPanel
           feature={feature}
-          onClose={() => setIsClicked(false)}
           isVisited={isVisited}
           onVisitedToggle={() => {
-            if (localStorage.getItem(feature.properties.Title)) {
-              localStorage.removeItem(feature.properties.Title);
+            if (localStorage.getItem(feature.properties?.Title)) {
+              localStorage.removeItem(feature.properties?.Title);
               setIsVisited(false);
             } else {
               localStorage.setItem(
-                feature.properties.Title,
+                feature.properties?.Title,
                 "visited"
               );
               setIsVisited(true);
             }
           }}
+          onClose={() => setIsClicked(false)}
         />
       )}
     </div>
   );
 };
-
 export default FeatureWrapper;

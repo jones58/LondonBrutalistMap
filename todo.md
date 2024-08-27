@@ -1,7 +1,6 @@
-- add SASS.
+- Use SASS to rebuild components, e.g. button etc.
 
-  - - [guide](https://www.youtube.com/watch?v=akDIJa0AP5c).
-      -nb lighten or darken thing, v useful.
+  - Maybe styled components too.
 
 - Brutalist map needs to be usable from the start, with landing page (sShould be able to just jump on website and use it)
 - Traditional information hierarchy, header in certain place, about subsection in certain place

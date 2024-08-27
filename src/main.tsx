@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Map from "./pages/map.tsx";
 import Game from "./pages/game.tsx";
@@ -10,6 +10,7 @@ import Index from "./pages/index.tsx";
 import Header from "./components/header.tsx";
 import Footer from "./components/footer.tsx";
 import ErrorPage from "./pages/errorpage.tsx";
+import Layout from "./components/layout.tsx";
 
 const router = createBrowserRouter([
   {
@@ -58,20 +59,6 @@ const router = createBrowserRouter([
     ),
   },
 ]);
-
-function Layout({
-  children: children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="sm:mx-10">
-      <Header />
-      {children}
-      <Footer />
-    </div>
-  );
-}
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

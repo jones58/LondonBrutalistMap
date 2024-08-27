@@ -1,6 +1,9 @@
 # Now
 
-- Use SASS to style components, e.g. button etc. Look at where tailwind is repeated a lot. Use [this guide](https://www.elian.codes/blog/21-04-13-writing-your-own-components-with-tailwind-sass/)
+- Use SASS to style components and make it tighter, e.g. button etc.
+  - Use [this guide](https://www.elian.codes/blog/21-04-13-writing-your-own-components-with-tailwind-sass/).
+  - Look at where tailwind is repeated a lot, basically abstract css into components just like react is abstracted into components.
+  - Use Take Back Water as example for SCSS code and what can do with it.
 
 ## Add Landing Page
 

@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Map from "./pages/map.tsx";
 import Game from "./pages/game.tsx";
 import About from "./pages/about.tsx";
-import Contact from "./pages/contact.tsx";
 import Index from "./pages/index.tsx";
 import ErrorPage from "./pages/errorpage.tsx";
 import Layout from "./components/layout.tsx";
@@ -40,14 +39,7 @@ const router = createBrowserRouter([
       </Layout>
     ),
   },
-  {
-    path: "/contact",
-    element: (
-      <Layout>
-        <Contact />
-      </Layout>
-    ),
-  },
+
   {
     path: "/building-index",
     element: (

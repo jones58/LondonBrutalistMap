@@ -87,16 +87,16 @@ function Header() {
               Map
             </Link>
             <Link
-              to="/about"
-              className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
-            >
-              About/Contact
-            </Link>
-            <Link
               to="/building-index"
               className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
             >
-              Index
+              Buildings
+            </Link>{" "}
+            <Link
+              to="/about"
+              className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+            >
+              About
             </Link>
           </div>
         </div>

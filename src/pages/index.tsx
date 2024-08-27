@@ -27,7 +27,7 @@ export default function Index() {
 
   return (
     <section className="pb-10 mb-10 w-full">
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
         {features.map((feature, index) => {
           const title = feature.properties.Title;
           return (

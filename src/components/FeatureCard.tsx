@@ -52,7 +52,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         </a>
       </div>
 
-      <div className="absolute top-5 right-5 flex space-x-4">
+      <div className="absolute bottom-2 right-2 flex space-x-4">
         <div
           className="w-20 h-20 bg-white rounded-lg flex flex-col items-center justify-center"
           onClick={onVisitedToggle}
@@ -64,16 +64,16 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           )}
           <p className="text-center">Visited?</p>
         </div>
-        {onClose && (
-          <div
-            className="w-20 h-20 bg-white rounded-lg flex flex-col items-center justify-center"
-            onClick={onClose}
-          >
-            <CloseButton className="p-3" />
-            <p className="text-center">Back</p>
-          </div>
-        )}
       </div>
+      {onClose && (
+        <div
+          className="absolute top-2 left-2 w-20 h-20 bg-white rounded-lg flex flex-col items-center justify-center"
+          onClick={onClose}
+        >
+          <CloseButton className="p-3" />
+          <p className="text-center">Back</p>
+        </div>
+      )}
     </div>
   );
 };

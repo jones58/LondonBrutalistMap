@@ -1,22 +1,22 @@
-- Use SASS to rebuild components, e.g. button etc.
+- Keep extracting out into components, and use SASS to style them
+  - Use SASS to rebuild components, e.g. button etc.
 
-  - Maybe styled components too.
+## Add Landing Page
 
-- Brutalist map needs to be usable from the start, with landing page (sShould be able to just jump on website and use it)
-- Traditional information hierarchy, header in certain place, about subsection in certain place
-- Brutalist map should have normal navigation header
+- Brutalist map needs to be usable from the start, with landing page (Should be able to just jump on website and use it)
 
-- change header so it has a hamburger menu
-- check mobile
+## Header
 
-  - no layout shift
+- no layout shift on mobile
 
-- download all image links as webp images and use them in the map
+## About Page
 
-- get directions button
+- Text just on left column, image on right. Image of brutalist interior, like view from inside a Trellick flat.
 
-- extract into components more
+## Other
 
-- edit readme so other people can use/edit. Write contributing md maybe.
+- download all image links as webp images and use them in the map with a cdn (see one Audrey reccommended)
 
-- about page - text just on left column, image on right. Image of brutalist interior, like view from inside a Trellick flat.
+- get directions, make into button
+
+- edit readme so other people can use/edit. Write contributing.md maybe.

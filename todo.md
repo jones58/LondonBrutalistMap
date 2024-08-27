@@ -1,18 +1,21 @@
-# Now
+# Todo Now
+
+## Improve Styling
 
 - Use SASS to style components and make it tighter, e.g. button etc.
   - Use [this guide](https://www.elian.codes/blog/21-04-13-writing-your-own-components-with-tailwind-sass/).
   - Look at where tailwind is repeated a lot, basically abstract css into components just like react is abstracted into components.
   - Use Take Back Water as example for SCSS code and what can do with it.
+  - Use SASS to build design consistency, even things like default colours etc. use variables etc.
+- Check mobile styling
+  - Mobile map shouldnt overflow onto footer
+  - No layout shift on mobile header.
+- mobile menu should fold up when click on something.
 
 ## Add Landing Page
 
 - Brutalist map needs to be usable from the start, with landing page (Should be able to just jump on website and use it)
 - like on this:(https://pinballmap.com/) and on dailychallenges site.
-
-## Header
-
-- no layout shift on mobile
 
 # Later
 
@@ -21,7 +24,8 @@
 - get directions, make into button
 - edit readme so other people can use/edit. Write contributing.md maybe.
 - visited count should just show local storage items visited, not other stuff in local storage. ie should be 3 not 5 now.
-- Improve SEO.
+- Improve SEO so it shows up on google.
+
 - More info links for the buildings - there are some really good websites out there about these buildings which I'd like to signpost to users of the map.
 
 ## Buildings page

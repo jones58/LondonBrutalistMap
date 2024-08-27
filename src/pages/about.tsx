@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
     <div>
-      <div className="space-y-5 mx-5 py-10 sm:mx-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="space-y-5 mx-5 py-10 sm:mx-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         <div className="col-span-1">
           <section>
             <h1 className="text-2xl">What is Brutalism?</h1>
@@ -50,7 +50,7 @@ export default function AboutPage() {
         <img
           src="/images/AboutPage.webp"
           alt="building"
-          className="filter grayscale w-full h-[70vh] object-contain col-span-1 md:col-start-2 lg:col-start-3 "
+          className="filter grayscale w-full h-[70vh] object-contain col-span-1 md:col-start-2 lg:col-start-3"
         />
       </div>
     </div>

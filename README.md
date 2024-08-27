@@ -27,6 +27,7 @@ Updated Brutalist Map built in React,TypeScript and Tailwind. Bootstrapped with 
 - Transformed svg icons to React TSX components using an [online tool](https://react-svgr.com/) - to allow for easier editing.
 - Updated mobile look of site after some debugging on different screen sizes.
 - I noticed some issues with images not loading, so I decided to download them from the links in the geojson data. I ran a python script to do this, and then another script to compress the .webp images down to below 1mb. This would improve speed.
+- Abstracting out mapcontrol and customMarker components into separate files from the map component. This improves editability.
 
 ## Running on your machine
 

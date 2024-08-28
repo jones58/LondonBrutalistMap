@@ -1,12 +1,13 @@
 # Todo Now
 
+- when click another marker, it should close the other one. and feature hover info should come at same place as feature full info.
+
 ## Improve Styling
 
 - Use SASS to style components and make it tighter, e.g. button etc.
   - Look at where tailwind is repeated a lot, basically abstract css into components just like react is abstracted into components. Can ask cody to do this.
-  - Use SASS to build design consistency, even things like default colours etc. use variables etc.
+  - apply default colours consistently.
 - Check mobile styling
-  - Mobile map shouldnt overflow onto footer
   - No layout shift on mobile header.
 - mobile menu should fold up when click on something.
 

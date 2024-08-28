@@ -53,7 +53,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         </a>
       </div>
       <div
-        className="feature-card__button bottom-2 right-2"
+        className="feature-card__button bottom-2 right-2 flex flex-col items-center justify-start space-y-1"
         onClick={onVisitedToggle}
       >
         {isVisited ? <VisitedCheckbox /> : <UnvisitedCheckbox />}
@@ -65,7 +65,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           className="feature-card__button top-2 left-2"
           onClick={onClose}
         >
-          <CloseButton className="p-3" />
+          <CloseButton />
           <p className="text-center">Back</p>
         </div>
       )}

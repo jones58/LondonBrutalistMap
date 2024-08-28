@@ -1,3 +1,5 @@
+import "./FeatureHoverInfo.scss";
+
 interface HoverInfoProps {
   title: string;
   onMouseEnter: () => void;
@@ -10,11 +12,14 @@ const HoverInfo: React.FC<HoverInfoProps> = ({
   onMouseLeave,
 }) => (
   <div
-    className="bg-white p-5 text-2xl text-black absolute right-10 top-10 rounded-lg shadow-lg shadow-black HoverInfo z-1 w-[400px]"
+    className="hover-info absolute sm:right-10 sm:top-10"
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
-    🔍 {title}
+    <span className="hover-info__title">
+      <span className="hover-info__icon">🔍</span>
+      {title}
+    </span>
   </div>
 );
 

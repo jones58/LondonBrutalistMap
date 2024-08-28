@@ -2,11 +2,13 @@ import Map from "react-map-gl";
 import { FeaturesData } from "../components/geoJSONData.tsx";
 import FeatureWrapper from "../components/FeatureWrapper.tsx";
 import MapControls from "../components/mapControls.tsx";
+import LandingPage from "../components/landingPage.tsx";
 
 export default function MapPage() {
   const features = FeaturesData.features;
   return (
     <div>
+      <LandingPage />
       <div className="w-full h-[80vh]">
         <Map
           mapboxAccessToken="pk.eyJ1Ijoiam9uZXM1ODEiLCJhIjoiY2xwNzAyeDVlMXlxZzJqbzVvcnBjbDZ3OCJ9.cuGt6LfugBHuqw9rJKQ2DA"

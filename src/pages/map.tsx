@@ -20,7 +20,15 @@ export default function MapPage() {
         >
           <MapControls />
           {features.map((feature) => (
-            <FeatureWrapper key={feature.id} feature={feature} />
+            <FeatureWrapper
+              key={feature.id}
+              feature={
+                feature as GeoJSON.Feature<
+                  GeoJSON.Geometry,
+                  GeoJSON.GeoJsonProperties
+                >
+              }
+            />
           ))}
         </Map>
       </div>

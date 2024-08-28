@@ -25,7 +25,6 @@
 - edit readme so other people can use/edit. Write contributing.md maybe.
 - visited count should just show local storage items visited, not other stuff in local storage. ie should be 3 not 5 now.
 - Improve SEO so it shows up on google.
-
 - More info links for the buildings - there are some really good websites out there about these buildings which I'd like to signpost to users of the map.
 
 ## Buildings page

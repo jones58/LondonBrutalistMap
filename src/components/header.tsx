@@ -1,9 +1,29 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useRef } from "react";
 
 function Header() {
+  const headerRef = useRef<HTMLElement>(null);
+
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        !headerRef.current?.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.body.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.body.removeEventListener("click", handleClickOutside);
+    };
+  }, [isOpen]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerWidth < 640 && isOpen) {
@@ -19,7 +39,7 @@ function Header() {
   }, [isOpen]);
 
   return (
-    <header className="z-50">
+    <header ref={headerRef} className="header z-50">
       <div className="flex justify-center sm:justify-between items-center space-x-5 py-10">
         <Link to="/" className="py-2">
           <h1 className="text-3xl">London Brutalist Map</h1>

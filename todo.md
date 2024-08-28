@@ -3,19 +3,12 @@
 ## Improve Styling
 
 - Use SASS to style components and make it tighter, e.g. button etc.
-  - Use [this guide](https://www.elian.codes/blog/21-04-13-writing-your-own-components-with-tailwind-sass/).
-  - Look at where tailwind is repeated a lot, basically abstract css into components just like react is abstracted into components.
-  - Use Take Back Water as example for SCSS code and what can do with it.
+  - Look at where tailwind is repeated a lot, basically abstract css into components just like react is abstracted into components. Can ask cody to do this.
   - Use SASS to build design consistency, even things like default colours etc. use variables etc.
 - Check mobile styling
   - Mobile map shouldnt overflow onto footer
   - No layout shift on mobile header.
 - mobile menu should fold up when click on something.
-
-## Add Landing Page
-
-- Brutalist map needs to be usable from the start, with landing page (Should be able to just jump on website and use it)
-- like on this:(https://pinballmap.com/) and on dailychallenges site.
 
 # Later
 
@@ -40,5 +33,4 @@
 ## Game page
 
 - I wanted to build a game using the same data, to test user's on their knowledge of the buildings. E.g. Photo, what building is this, user inputs their answer.
-- Fix the game so it works - commented out in header atm.
 - add more steps to game - atm just says correct or incorrect. Score counter etc.

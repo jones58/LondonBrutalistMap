@@ -21,7 +21,7 @@ function Header() {
   return (
     <header className="z-50">
       <div className="flex justify-center sm:justify-between items-center space-x-5 py-10">
-        <Link to="/" className=" hover:bg-gray-100 py-2 rounded-md">
+        <Link to="/" className="py-2">
           <h1 className="text-3xl">London Brutalist Map</h1>
         </Link>
 

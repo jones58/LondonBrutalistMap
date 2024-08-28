@@ -1,41 +1,5 @@
 @use "tailwindcss/base" as *;
 @use "tailwindcss/components" as *;
 @use "tailwindcss/utilities" as *;
-
 @import "./button";
-
-:root {
-  font-family: "Real Text Pro", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1 {
-  font-family: "Real Text Pro Bold", sans-serif;
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: "Real Text Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: url(/fonts/Real-Text-Pro/RealTextPro-Regular.otf);
-}
-
-@font-face {
-  font-family: "Real Text Pro Medium";
-  font-style: normal;
-  font-weight: 600;
-  src: url(/fonts/Real-Text-Pro/RealTextPro-Medium.otf);
-}
-
-@font-face {
-  font-family: "Real Text Pro Bold";
-  font-style: normal;
-  font-weight: 800;
-  src: url(/fonts/Real-Text-Pro/RealTextPro-Bold.otf);
-}
+@import "./typography";

@@ -41,7 +41,7 @@ function Header() {
   return (
     <header ref={headerRef} className="header z-50">
       <div className="flex justify-center sm:justify-between items-center space-x-5 py-10">
-        <Link to="/" className="py-2">
+        <Link to="/">
           <h1 className="text-3xl">London Brutalist Map</h1>
         </Link>
         <nav className="hidden sm:block">

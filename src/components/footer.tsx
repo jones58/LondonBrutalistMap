@@ -2,7 +2,7 @@ import VisitedCount from "../components/visitedCount.tsx";
 
 export function Footer() {
   return (
-    <div className="whitebg w-full h-[8vh] sm:h-[10vh]  text-3xl flex flex-col justify-center sm:justify-right space-x-4 py-[1vh] text-center sm:text-left fixed bottom-0">
+    <div className="whitebg w-full text-2xl flex flex-col justify-center sm:justify-right space-x-4 py-5 text-center sm:text-left fixed bottom-0 z-50">
       <VisitedCount></VisitedCount>
     </div>
   );

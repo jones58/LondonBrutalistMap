@@ -44,30 +44,23 @@ function Header() {
         <Link to="/" className="py-2">
           <h1 className="text-3xl">London Brutalist Map</h1>
         </Link>
-
         <nav className="hidden sm:block">
           <ul className="flex space-x-4">
             <li>
-              <Link
-                to="/"
-                className=" hover:bg-gray-100 px-3 py-2 rounded-md"
-              >
+              <Link to="/" className=" px-3 py-2 rounded-md">
                 Map
               </Link>
             </li>
             <li>
               <Link
                 to="/building-index"
-                className=" hover:bg-gray-100 px-3 py-2 rounded-md"
+                className="  px-3 py-2 rounded-md"
               >
                 Buildings
               </Link>
             </li>
             <li>
-              <Link
-                to="/about"
-                className=" hover:bg-gray-100 px-3 py-2 rounded-md"
-              >
+              <Link to="/about" className="  px-3 py-2 rounded-md">
                 About
               </Link>
             </li>
@@ -100,22 +93,16 @@ function Header() {
       {isOpen && (
         <div className="sm:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link
-              to="/"
-              className="block  hover:bg-gray-100 px-3 py-2 rounded-md"
-            >
+            <Link to="/" className="block   px-3 py-2 rounded-md">
               Map
             </Link>
             <Link
               to="/building-index"
-              className="block  hover:bg-gray-100 px-3 py-2 rounded-md"
+              className="block   px-3 py-2 rounded-md"
             >
               Buildings
             </Link>{" "}
-            <Link
-              to="/about"
-              className="block  hover:bg-gray-100 px-3 py-2 rounded-md"
-            >
+            <Link to="/about" className="block   px-3 py-2 rounded-md">
               About
             </Link>
           </div>

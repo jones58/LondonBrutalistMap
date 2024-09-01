@@ -40,8 +40,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         </div>
 
         <div className="feature-card__info">
-          <span className="text-red">Completed in:</span>{" "}
-          {feature.properties?.Completed}
+          <span>Completed in:</span> {feature.properties?.Completed}
         </div>
         <a
           href={feature.properties?.URL}
@@ -53,7 +52,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         </a>
       </div>
       <div
-        className="feature-card__button bottom-2 right-2 flex flex-col items-center justify-start space-y-1"
+        className="feature-card__button top-2 right-2 flex flex-col items-center justify-start space-y-1"
         onClick={onVisitedToggle}
       >
         {isVisited ? <VisitedCheckbox /> : <UnvisitedCheckbox />}

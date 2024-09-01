@@ -1,7 +1,8 @@
 @import "../styles/_colors.scss";
 
 @mixin card-layout {
-  @apply relative flex flex-col items-center justify-center bg-gray-100 sm:rounded-lg overflow-hidden sm:h-[80v];
+  @apply relative flex flex-col items-center justify-center sm:rounded-lg overflow-hidden sm:h-[80v];
+  background-color: $gray;
 }
 
 @mixin image {

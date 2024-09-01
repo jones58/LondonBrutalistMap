@@ -50,7 +50,7 @@ function Header() {
             <li>
               <Link
                 to="/"
-                className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+                className=" hover:bg-gray-100 px-3 py-2 rounded-md"
               >
                 Map
               </Link>
@@ -58,7 +58,7 @@ function Header() {
             <li>
               <Link
                 to="/building-index"
-                className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+                className=" hover:bg-gray-100 px-3 py-2 rounded-md"
               >
                 Buildings
               </Link>
@@ -66,7 +66,7 @@ function Header() {
             <li>
               <Link
                 to="/about"
-                className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+                className=" hover:bg-gray-100 px-3 py-2 rounded-md"
               >
                 About
               </Link>
@@ -74,7 +74,7 @@ function Header() {
           </ul>
         </nav>
         <button
-          className="sm:hidden text-gray-700 focus:outline-none"
+          className="sm:hidden  focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
@@ -102,19 +102,19 @@ function Header() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
               to="/"
-              className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+              className="block  hover:bg-gray-100 px-3 py-2 rounded-md"
             >
               Map
             </Link>
             <Link
               to="/building-index"
-              className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+              className="block  hover:bg-gray-100 px-3 py-2 rounded-md"
             >
               Buildings
             </Link>{" "}
             <Link
               to="/about"
-              className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md"
+              className="block  hover:bg-gray-100 px-3 py-2 rounded-md"
             >
               About
             </Link>

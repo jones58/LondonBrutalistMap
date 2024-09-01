@@ -3,3 +3,8 @@
 @use "tailwindcss/utilities" as *;
 @import "./button";
 @import "./typography";
+@import "./colors";
+
+.whitebg {
+  background-color: $white;
+}

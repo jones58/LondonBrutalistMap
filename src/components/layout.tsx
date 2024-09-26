@@ -9,7 +9,7 @@ export default function Layout({
   return (
     <div className="sm:mx-10">
       <Header />
-      {children}
+      <div className="py-28 sm:py-0">{children}</div>
       <Footer />
     </div>
   );

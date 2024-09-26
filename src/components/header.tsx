@@ -39,7 +39,10 @@ function Header() {
   }, [isOpen]);
 
   return (
-    <header ref={headerRef} className="header z-50">
+    <header
+      ref={headerRef}
+      className="fixed top-0 left-0 right-0 z-50 bg-white sm:bg-transparent sm:relative"
+    >
       <div className="flex justify-center sm:justify-between items-center space-x-5 py-10">
         <Link to="/">
           <h1 className="text-3xl">London Brutalist Map</h1>

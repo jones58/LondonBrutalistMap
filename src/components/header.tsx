@@ -57,7 +57,7 @@ function Header() {
             <li>
               <Link
                 to="/building-index"
-                className="  px-3 py-2 rounded-md"
+                className="px-3 py-2 rounded-md"
               >
                 Buildings
               </Link>

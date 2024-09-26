@@ -48,7 +48,7 @@ function Header() {
           <h1 className="text-3xl">London Brutalist Map</h1>
         </Link>
         <nav className="hidden sm:block">
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 text-xl">
             <li>
               <Link to="/" className=" px-3 py-2 rounded-md">
                 Map

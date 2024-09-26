@@ -34,6 +34,7 @@ Updated Brutalist Map built in React,TypeScript and Tailwind. Bootstrapped with 
 - Added a typography SCSS file to extract out of globals and make it easier to edit.
 - Extracted common tailwind styles to scss, to make them easier to edit.
 - Moved from Mapbox maplibre-gl, using the guides on [OpenFreeMap](https://openfreemap.org/) and their tiling. This should enable people to contribute to this repository more easily (i previously used a mapbox api key tied to the local and production servers).
+  - I used Maputnik to generate styles and [Map Libre Font Maker](https://github.com/maplibre/font-maker) to generate the font tiles I needed.
 
 ## Running on your machine
 

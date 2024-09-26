@@ -23,9 +23,9 @@ const LandingPage: React.FC = () => {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-10 landing-page">
-      <div className=" p-10 rounded-lg shadow-xl max-w-xl">
-        <h1>Welcome to the London Brutalist Map!</h1>
+    <div className="fixed inset-0 bg-black text-white flex items-center justify-center z-10 landing-page h-screen">
+      <div className="p-10 rounded-lg shadow-xl max-w-xl">
+        <h1 className="mt-5">Welcome to the London Brutalist Map!</h1>
         <p>
           This site serves as a guide to London's Brutalist
           architecture, allowing you to learn about, and track visits
@@ -59,7 +59,7 @@ const LandingPage: React.FC = () => {
         </li>
         <button
           onClick={handleClose}
-          className="bg-gray-900 hover:bg-black text-white p-5 w-full rounded-lg mt-8 "
+          className="bg-white hover:bg-neutral-600 text-black p-5 w-full rounded-lg mt-8 "
         >
           Get Started
         </button>

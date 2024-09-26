@@ -7,8 +7,9 @@ const VisitedCount: React.FC = () => {
   useEffect(() => {
     const calculateVisitedNumber = () => {
       const visitedNumber = Object.keys(localStorage).filter(
-        (key) => !/mapbox/.test(key)
+        (key) => localStorage.getItem(key) === "visited"
       ).length;
+
       setCount(visitedNumber);
     };
     calculateVisitedNumber();

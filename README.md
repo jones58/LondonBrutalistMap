@@ -36,10 +36,30 @@ Updated Brutalist Map built in React,TypeScript and Tailwind. Bootstrapped with 
 - Moved from Mapbox maplibre-gl, using the guides on [OpenFreeMap](https://openfreemap.org/) and their tiling. This should enable people to contribute to this repository more easily (i previously used a mapbox api key tied to the local and production servers).
   - I used Maputnik to generate styles and [Map Libre Font Maker](https://github.com/maplibre/font-maker) to generate the font tiles I needed.
 
+## Resources:
+
+### Brutalism:
+
+- https://socialistmodernism.com/
+- https://www.sosbrutalism.org/cms/15802395#map
+- https://bluecrowmedia.com/products/brutalist-london-map
+- https://www.youtube.com/watch?v=UWhuHiL8Pug
+- https://www.youtube.com/watch?v=TvKi_hsJf3c
+- https://www.bloomberg.com/news/articles/2015-11-25/the-case-for-calling-brutalism-heroic-instead
+- https://www.langhamhouseclose.com/
+- Brutal London, Simon Phipps
+
+### Maps:
+
+- https://strikemap.org
+- https://pnote.eu/projects/invaders/map.html
+- https://www.are.na/gemma-copeland/community-maps    
+
 ## Running on your machine
 
-Clone the project and run the development server:
+Clone the project and run:
 
 ```bash
+npm install
 npm run dev
 ```

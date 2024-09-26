@@ -40,9 +40,9 @@ Updated Brutalist Map built in React,TypeScript and Tailwind. Bootstrapped with 
 
 ### Brutalism:
 
-- https://socialistmodernism.com/
-- https://www.sosbrutalism.org/cms/15802395#map
-- https://bluecrowmedia.com/products/brutalist-london-map
+- [Socialist Modernism](https://socialistmodernism.com/)
+- [SOS Brutalism Map](https://www.sosbrutalism.org/cms/15802395#map)
+- [Brutalist London Paper Map] (https://bluecrowmedia.com/products/brutalist-london-map)
 - https://www.youtube.com/watch?v=UWhuHiL8Pug
 - https://www.youtube.com/watch?v=TvKi_hsJf3c
 - https://www.bloomberg.com/news/articles/2015-11-25/the-case-for-calling-brutalism-heroic-instead
@@ -51,9 +51,10 @@ Updated Brutalist Map built in React,TypeScript and Tailwind. Bootstrapped with 
 
 ### Maps:
 
-- https://strikemap.org
-- https://pnote.eu/projects/invaders/map.html
-- https://www.are.na/gemma-copeland/community-maps    
+- [Strikemap](https://strikemap.org)
+- [Space Invaders Photo Map](https://pnote.eu/projects/invaders/map.html)
+- [Community Maps](https://www.are.na/gemma-copeland/community-maps)
+- [Pinball Map](https://pinballmap.com/)
 
 ## Running on your machine
 

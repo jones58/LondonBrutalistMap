@@ -8,7 +8,7 @@ Map of London's brutalist buildings built in React,TypeScript and Tailwind. Uses
 - I realised that this would allow me to use the mapbox NPM package rather than the CDN method I was previously using, which would allow me to host the geojson data myself - making it much easier to edit.
 - During development, it became obvious that I could make a multi-page site with the data, now that I was selfhosting it, allowing me to display it in different ways. This would allow different users to engage as they wished.
 
-##Building
+## Building
 
 - First, I set up the app using Vite.
 - Then I worked on each of the pages in the app, using Tailwind CSS to rapidly design them in a similar style to my Brutalist Map project.

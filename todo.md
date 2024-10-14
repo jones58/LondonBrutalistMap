@@ -11,7 +11,6 @@
 ## Other
 
 - when click another marker, it should close the other one.
-- visited count should just show local storage items visited, not other stuff in local storage. ie should be 3 not 5 now.
 
 # Later
 

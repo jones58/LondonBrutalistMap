@@ -1,32 +1,8 @@
-make more user friendly by:
-
-Add inline comments to complex code sections: This will help new editors understand the logic and purpose of different parts of the codebase.
-
-Create a .github folder with issue and pull request templates: This will guide contributors on how to properly format their issues and pull requests.
-
-Set up a CI/CD pipeline: This will automatically run tests and checks on pull requests, making it easier for new editors to ensure their contributions meet the project's standards.
-
-Implement a consistent code formatting tool: Use tools like Prettier or ESLint to maintain a consistent code style throughout the project.
-
-Provide a detailed project roadmap: This will give new editors an idea of the project's direction and where they can contribute most effectively.
-
-Set up a development branch: This will allow contributors to work on features without affecting the main branch directly.
-
-## Improve Styling
-
-- extract tailwind into scss docs.
-- apply default colours consistently.
-  -Consistent colors, search with % for white gray black neutral etc and replace. Use lighten thing if need to
-
-## Other
-
-- when click another marker, it should close the other one.
-
 ## Other
 
+- when click another marker, it should close the other one.
 - get directions, make into button
 - edit readme so other people can use/edit. Write contributing.md maybe.
-
 - Improve SEO so it shows up on google.
 - More info links for the buildings - there are some really good websites out there about these buildings which I'd like to signpost to users of the map.
 
@@ -45,4 +21,22 @@ Set up a development branch: This will allow contributors to work on features wi
 - I wanted to build a game using the same data, to test user's on their knowledge of the buildings. E.g. Photo, what building is this, user inputs their answer.
 - add more steps to game - atm just says correct or incorrect. Score counter etc.
 
-const headerRef = useRef<HTMLElement>(null);
+## Improve Styling
+
+- extract tailwind into scss docs.
+- apply default colours consistently.
+  -Consistent colors, search with % for white gray black neutral etc and replace. Use lighten thing if need to
+
+## Get contributions
+
+make more user friendly by:
+
+Add inline comments to complex code sections: This will help new editors understand the logic and purpose of different parts of the codebase.
+
+Set up a CI/CD pipeline: This will automatically run tests and checks on pull requests, making it easier for new editors to ensure their contributions meet the project's standards.
+
+Implement a consistent code formatting tool: Use tools like Prettier or ESLint to maintain a consistent code style throughout the project.
+
+Provide a detailed project roadmap: This will give new editors an idea of the project's direction and where they can contribute most effectively.
+
+Set up a development branch: This will allow contributors to work on features without affecting the main branch directly.

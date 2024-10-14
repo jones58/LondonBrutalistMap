@@ -1,7 +1,5 @@
 make more user friendly by:
 
-Enhance the README.md: Add more detailed information about the project structure, technologies used, and how to run the project locally. Include a section on how to contribute, linking to the CONTRIBUTING.md file.
-
 Add inline comments to complex code sections: This will help new editors understand the logic and purpose of different parts of the codebase.
 
 Create a .github folder with issue and pull request templates: This will guide contributors on how to properly format their issues and pull requests.

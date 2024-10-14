@@ -1,6 +1,73 @@
 # London Brutalist Map
 
-Map of London's brutalist buildings built in React,TypeScript and Tailwind. Uses LibreMap and OpemFreeMap. Deployed to Netlify on [londonbrutalistmap.co.uk](https://londonbrutalistmap.co.uk/)
+Map of London's brutalist buildings built in React, TypeScript, and Tailwind. Uses LibreMap and OpenFreeMap. Deployed to Netlify on [londonbrutalistmap.co.uk](https://londonbrutalistmap.co.uk/)
+
+## Project Structure
+
+The project follows a typical React application structure, held together with React Router.
+
+## Project Structure
+
+The project follows a comprehensive React application structure:
+
+- `.gitignore`: Specifies intentionally untracked files to ignore
+- `CODE_OF_CONDUCT.md`: Guidelines for community behavior
+- `CONTRIBUTING.md`: Instructions for contributing to the project
+- `LICENSE`: Project license information
+- `README.md`: Project documentation (this file)
+- `index.html`: Entry point of the application
+- `netlify.toml`: Netlify deployment configuration
+- `package.json` & `package-lock.json`: Node.js dependencies and lock file
+- `postcss.config.js`: PostCSS configuration
+- `public/`: Static assets
+  - `data/`: Contains GeoJSON data for the buildings
+  - `favicons/`: Favicon files
+  - `fonts/`: Custom fonts
+  - `images/`: Image assets, including building photos
+  - `mapfonts/`: Font files for map rendering
+  - `mapstyles.json`: Map style configuration
+- `src/`: Contains the main source code
+  - `components/`: React components
+  - `pages/`: Page-level components
+  - `styles/`: SCSS files for styling
+  - `main.tsx`: Main React entry point
+  - `vite-env.d.ts`: Vite environment type declarations
+- `tailwind.config.js`: Tailwind CSS configuration
+- `tsconfig.json` & `tsconfig.node.json`: TypeScript configuration files
+- `vite.config.ts`: Vite build tool configuration
+
+## Technologies Used
+
+- React
+- TypeScript
+- Tailwind CSS
+- React Router
+- React-map-gl
+- MapLibre GL
+- SASS
+
+## Running the Project Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/brutalist-map-2.git
+   cd brutalist-map-2
+   ```
+2. Install packages:
+   ```bash
+   npm install
+   ```
+3. Run:
+
+   ```bash
+     npm run dev
+   ```
+
+## Contributing
+
+We welcome all contributions, big or small! Please refer to [CONTRIBUTING](/CONTRIBUTING.md) for instructions on how to contribute.
+
+# How I built this site (Last updated August 2024, before this project was updated for open-source)
 
 ## Why
 
@@ -58,12 +125,3 @@ Map of London's brutalist buildings built in React,TypeScript and Tailwind. Uses
 - [Space Invaders Photo Map](https://pnote.eu/projects/invaders/map.html)
 - [Community Maps](https://www.are.na/gemma-copeland/community-maps)
 - [Pinball Map](https://pinballmap.com/)
-
-## Running on your machine
-
-Clone the project and run:
-
-```bash
-npm install
-npm run dev
-```

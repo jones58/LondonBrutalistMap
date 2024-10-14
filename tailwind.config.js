@@ -8,7 +8,11 @@ export default {
     "./src/**/*.tsx",
   ],
   theme: {
-    extend: {},
+    extend: {
+      black: "#212121",
+      gray: "#e5e5e5",
+      white: "#faf3f3",
+    },
   },
   plugins: [],
 };

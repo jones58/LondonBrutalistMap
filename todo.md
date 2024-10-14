@@ -1,18 +1,12 @@
-# Todo Now
-
 ## Improve Styling
 
 - extract tailwind into scss docs.
 - apply default colours consistently.
   -Consistent colors, search with % for white gray black neutral etc and replace. Use lighten thing if need to
-- Check mobile styling
-  - No layout shift on mobile header.
 
 ## Other
 
 - when click another marker, it should close the other one.
-
-# Later
 
 ## Other
 

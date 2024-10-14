@@ -2,13 +2,19 @@
 
 Map of London's brutalist buildings built in React, TypeScript, and Tailwind. Uses LibreMap and OpenFreeMap. Deployed to Netlify on [londonbrutalistmap.co.uk](https://londonbrutalistmap.co.uk/)
 
+## Technologies Used
+
+- React
+- TypeScript
+- Tailwind CSS
+- React Router
+- React-map-gl
+- MapLibre GL
+- SASS
+
 ## Project Structure
 
-The project follows a typical React application structure, held together with React Router.
-
-## Project Structure
-
-The project follows a comprehensive React application structure:
+The project follows a typical React application structure, held together with React Router:
 
 - `.gitignore`: Specifies intentionally untracked files to ignore
 - `CODE_OF_CONDUCT.md`: Guidelines for community behavior
@@ -36,16 +42,6 @@ The project follows a comprehensive React application structure:
 - `tsconfig.json` & `tsconfig.node.json`: TypeScript configuration files
 - `vite.config.ts`: Vite build tool configuration
 
-## Technologies Used
-
-- React
-- TypeScript
-- Tailwind CSS
-- React Router
-- React-map-gl
-- MapLibre GL
-- SASS
-
 ## Running the Project Locally
 
 1. Clone the repository:
@@ -66,6 +62,26 @@ The project follows a comprehensive React application structure:
 ## Contributing
 
 We welcome all contributions, big or small! Please refer to [CONTRIBUTING](/CONTRIBUTING.md) for instructions on how to contribute.
+
+## Resources:
+
+### Brutalism:
+
+- [Socialist Modernism](https://socialistmodernism.com/)
+- [SOS Brutalism Map](https://www.sosbrutalism.org/cms/15802395#map)
+- [Brutalist London Paper Map] (https://bluecrowmedia.com/products/brutalist-london-map)
+- https://www.youtube.com/watch?v=UWhuHiL8Pug
+- https://www.youtube.com/watch?v=TvKi_hsJf3c
+- https://www.bloomberg.com/news/articles/2015-11-25/the-case-for-calling-brutalism-heroic-instead
+- https://www.langhamhouseclose.com/
+- Brutal London, Simon Phipps
+
+### Maps:
+
+- [Strikemap](https://strikemap.org)
+- [Space Invaders Photo Map](https://pnote.eu/projects/invaders/map.html)
+- [Community Maps](https://www.are.na/gemma-copeland/community-maps)
+- [Pinball Map](https://pinballmap.com/)
 
 # How I built this site (Last updated August 2024, before this project was updated for open-source)
 
@@ -105,23 +121,3 @@ We welcome all contributions, big or small! Please refer to [CONTRIBUTING](/CONT
 - Extracted common tailwind styles to scss, to make them easier to edit.
 - Moved from Mapbox maplibre-gl, using the guides on [OpenFreeMap](https://openfreemap.org/) and their tiling. This should enable people to contribute to this repository more easily (i previously used a mapbox api key tied to the local and production servers).
   - I used Maputnik to generate styles and [Map Libre Font Maker](https://github.com/maplibre/font-maker) to generate the font tiles I needed.
-
-## Resources:
-
-### Brutalism:
-
-- [Socialist Modernism](https://socialistmodernism.com/)
-- [SOS Brutalism Map](https://www.sosbrutalism.org/cms/15802395#map)
-- [Brutalist London Paper Map] (https://bluecrowmedia.com/products/brutalist-london-map)
-- https://www.youtube.com/watch?v=UWhuHiL8Pug
-- https://www.youtube.com/watch?v=TvKi_hsJf3c
-- https://www.bloomberg.com/news/articles/2015-11-25/the-case-for-calling-brutalism-heroic-instead
-- https://www.langhamhouseclose.com/
-- Brutal London, Simon Phipps
-
-### Maps:
-
-- [Strikemap](https://strikemap.org)
-- [Space Invaders Photo Map](https://pnote.eu/projects/invaders/map.html)
-- [Community Maps](https://www.are.na/gemma-copeland/community-maps)
-- [Pinball Map](https://pinballmap.com/)

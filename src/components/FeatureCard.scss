@@ -40,6 +40,6 @@
 
   &__button {
     @apply absolute w-20 h-20 rounded-lg flex flex-col items-center justify-start p-2;
-    background-color: lighten($white, 20%);
+    background-color: $white;
   }
 }

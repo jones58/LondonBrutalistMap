@@ -1,5 +1,6 @@
 import Header from "./header.tsx";
 import Footer from "./footer.tsx";
+import Meta from "./meta.tsx";
 
 export default function Layout({
   children: children,
@@ -7,10 +8,16 @@ export default function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="sm:mx-10">
-      <Header />
-      <div className="py-28 sm:py-0">{children}</div>
-      <Footer />
-    </div>
+    <>
+      <Meta />
+      <body>
+        <div className="sm:mx-10">
+          <Meta />
+          <Header />
+          <div className="py-28 sm:py-0">{children}</div>
+          <Footer />
+        </div>
+      </body>
+    </>
   );
 }

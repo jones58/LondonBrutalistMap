@@ -3,8 +3,8 @@
 - when click another marker, it should close the other one.
 - get directions, make into button
 - edit readme so other people can use/edit. Write contributing.md maybe.
-- Improve SEO so it shows up on google.
 - More info links for the buildings - there are some really good websites out there about these buildings which I'd like to signpost to users of the map.
+- check google search position on oct 21 or later (maybe use google search console) and improve SEO as needed.
 
 ## Buildings page
 

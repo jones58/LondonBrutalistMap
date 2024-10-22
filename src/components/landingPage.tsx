@@ -47,16 +47,20 @@ const LandingPage: React.FC = () => {
           </ul>
         </p>
         <h2>View Buildings:</h2>
-        <li>
-          View all the buildings in a list format. You can access this
-          by clicking on the visited count.
-        </li>
+        <ul>
+          <li>
+            View all the buildings in a list format. You can access
+            this by clicking on the visited count.
+          </li>
+        </ul>
         <h2>See Your Visited Buildings:</h2>
-        <li>
-          At the bottom of the page you can find a visited count,
-          showing how many of the 104 buildings you've marked as
-          visited.
-        </li>
+        <ul>
+          <li>
+            At the bottom of the page you can find a visited count,
+            showing how many of the 104 buildings you've marked as
+            visited.
+          </li>
+        </ul>
         <button
           onClick={handleClose}
           className="bg-white hover:bg-neutral-600 text-black p-5 w-full rounded-lg mt-8 "

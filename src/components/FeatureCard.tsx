@@ -30,6 +30,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         sizes="100vw"
         className="feature-card__image"
         loading="lazy"
+        title={feature.properties?.Title}
       />
 
       <div className="feature-card__content">

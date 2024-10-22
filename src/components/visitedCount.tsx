@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, React } from "react";
 import { Link } from "react-router-dom";
 
 const VisitedCount: React.FC = () => {
@@ -19,7 +19,7 @@ const VisitedCount: React.FC = () => {
 
   return (
     <Link to="/building-index">
-      <h1>{`Visited: ${buildingsCount}/104`}</h1>
+      <h2>{`Visited: ${buildingsCount}/104`}</h2>
     </Link>
   );
 };

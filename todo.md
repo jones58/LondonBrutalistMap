@@ -22,6 +22,7 @@
 
 ## Improve Styling
 
+- fix for mobile - iphone se not looking great.
 - extract tailwind into scss docs.
 - apply default colours consistently.
   -Consistent colors, search with % for white gray black neutral etc and replace. Use lighten thing if need to

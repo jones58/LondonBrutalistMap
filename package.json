@@ -13,7 +13,7 @@
     "autoprefixer": "^10.4.19",
     "axios": "^1.7.5",
     "maplibre-gl": "^4.7.1",
-    "netlify-cli": "^17.36.2",
+    "netlify-cli": "^17.37.1",
     "postcss": "^8.4.41",
     "postcss-nested": "^6.2.0",
     "react": "^18.3.1",

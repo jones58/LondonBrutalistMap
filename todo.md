@@ -1,9 +1,13 @@
 ## Other
 
-- when click another marker, it should close the other one (use either useContext/create context for this or useState, or Redux([guide here](https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867))).
-- edit readme so other people can use/edit. Write contributing.md maybe.
+- When click another marker, it should close the other one (use either useContext/create context for this or useState, or Redux([guide here](https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867))).
+- Edit readme so other people can use/edit. Write contributing.md maybe.
 - More info links for the buildings - there are some really good websites out there about these buildings which I'd like to signpost to users of the map.
-- check google search position on oct 21 or later (maybe use google search console) and improve SEO as needed.
+
+## SEO
+
+- Use Google Search Console
+- Edit SEO
 
 ## Buildings page
 

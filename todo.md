@@ -8,6 +8,7 @@
 
 - Use Google Search Console
 - Edit SEO
+- outbound links?
 
 ## Buildings page
 

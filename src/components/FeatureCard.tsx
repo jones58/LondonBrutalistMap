@@ -29,12 +29,13 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         height={400}
         sizes="100vw"
         className="feature-card__image"
+        loading="lazy"
       />
 
       <div className="feature-card__content">
-        <h1 className="feature-card__title">
+        <h2 className="feature-card__title">
           {feature.properties?.Title}
-        </h1>
+        </h2>
         <div className="feature-card__info">
           <span>Designed by:</span> {feature.properties?.Designer}
         </div>

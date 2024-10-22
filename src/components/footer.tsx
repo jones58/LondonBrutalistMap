@@ -1,5 +1,4 @@
 import VisitedCount from "../components/visitedCount.tsx";
-import React from "react";
 
 export function Footer() {
   return (

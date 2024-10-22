@@ -1,5 +1,5 @@
 import { FeaturesData } from "../components/geoJSONData.tsx";
-import React, { useState } from "react";
+import { useState } from "react";
 import FeatureCard from "../components/FeatureCard.tsx";
 
 export default function Index() {

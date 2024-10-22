@@ -1,4 +1,3 @@
-import React from "react";
 import FeatureCard from "./FeatureCard";
 
 interface InfoPanelProps {

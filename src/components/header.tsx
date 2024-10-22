@@ -72,6 +72,7 @@ function Header() {
         <button
           className="sm:hidden  focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="menu button"
         >
           <svg
             className="h-6 w-6"

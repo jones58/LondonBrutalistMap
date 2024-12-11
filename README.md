@@ -1,6 +1,6 @@
 # London Brutalist Map
 
-Map of London's brutalist buildings built in React, TypeScript, and Tailwind. Uses LibreMap and OpenFreeMap. Deployed to Netlify on [brutalistmap.jackkershaw.net](https://brutalistmap.jackkershaw.net)
+Map of London's brutalist buildings built in React, TypeScript, and Tailwind. Uses LibreMap and OpenFreeMap. Deployed to Netlify on [londonbrutalistmap.co.uk](https://londonbrutalistmap.co.uk)
 
 ## Technologies Used
 

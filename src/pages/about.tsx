@@ -28,7 +28,7 @@ export default function AboutPage() {
               This website was created by Jack Kershaw and the code can
               be viewed{" "}
               <a
-                href="https://github.com/jones58/brutalist-buildings-guesser"
+                href="https://github.com/jackkershaw/brutalist-buildings-guesser"
                 className="underline"
                 target="_blank"
                 rel="noreferrer"
@@ -37,12 +37,12 @@ export default function AboutPage() {
               </a>
               . You can contact me by email here: {""}
               <a
-                href="mailto:jackkershaw@protonmail.com"
+                href="mailto:hello@jackkershaw.net"
                 className="underline"
                 target="_blank"
                 rel="noreferrer"
               >
-                jackkershaw@protonmail.com
+                hello@jackkershaw.net
               </a>
             </p>
           </section>
